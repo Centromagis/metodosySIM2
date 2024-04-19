@@ -1,0 +1,171 @@
+---
+title: <span style="color:#034a94"> **Valor esperado y Varianza**</span>
+author: "Métodos y Simulación Estadística"
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = NA)
+
+```
+
+<br/><br/>
+
+
+# <span style="color:#034a94">**Valor esperado**</span>
+
+<br/>
+
+El valor esperado o esperanza matemática y la varianza corresponde a dos los conceptos principales asociados a una variable aleatoria. El concepto de esperanza está relacionado en un principio con los juegos de azar, pues los jugadores querían conocer cual era el valor esperado de ganar cuando jugaban un gran número de veces. 
+
+La esperanza matemática de una variable aleatoria $X$,  corresponde a un valor que representa el valor más probable que ocurra o la media población de la variable aleatoria denotada por $E[X]$ o también $\mu$
+
+<br/><br/>
+
+<div class="content-box-blue">
+
+### <span style="color:#034a94">**Definición Valor Esperado**</span>
+
+Sea $X$ una variable aleatoria discreta o continua. La esperanza matemática de $X$ o valor esperado, $E(X)$ o bien $\mu$, se define respectivamente como,
+
+| Caso discreto                           |Caso continuo                          |
+|:---------------------------------------:|:-------------------------------------:|
+| $E(X)=\displaystyle\sum\limits_{R_X}^{}x_{i}f(x_{i})$ | $E(X)=\displaystyle\int\limits_{-\infty}^{+\infty}x f(x)dx$ |
+
+</div> 
+
+<br/>
+
+En el caso continuo y de manera similar para el caso discreto.
+
+<br/>
+
+<div class="content-box-blue">
+
+## <span style="color:#034a94">**Propiedades del Valor Esperado**</span>
+
++ $E(k) = k$, para todo numero real $k$.
+
++ $E(kX) = k E(X)$, para todo número real $k$.
+
++ $E(aX + b) = a E(X) + b$, para todo par de números $a$ y $b$
+
++ $E(aX + bY) = a E (X) + b E(Y)$
+
++ $E(XY) = E(X)E(Y)$, 	unicamente en el caso que $X$ e $Y$ sean variables aleatorias independientes
+</div> 
+
+<br/><br/>
+
+
+# <span style="color:#034a94">**Varianza**</span>
+
+Otra característica importante de las variables aleatorias corresponde a la varianza que se denota por $V[X]$ o $\sigma^{2}$. Antes de definir este parámetro, veremos el concepto de **momento** de una variable aleatoria
+
+<br/>
+
+<div class="content-box-blue">
+
+### <span style="color:#034a94">**Definición Momento**</span>
+
+Sea $X$ una variable aleatoria discreta o continua. El momento de orden $k$ se define como:
+
+| Caso discreto                           |Caso continuo                          |
+|:---------------------------------------:|:-------------------------------------:|
+|$E(X^{k})=\displaystyle\sum\limits_{R_X}^{}x_{i}^{k}f(x_{i})$|$E(X^{k})=\displaystyle\int\limits_{-\infty}^{+\infty}x^{k} f(x)dx$|
+
+</div> 
+
+<br/><br/>
+
+Con este nuevo elemento se define la varianza de una variable aleatorias como la diferencia entre el segundo momento y el cuadrado del primer momento
+
+<br/><br/>
+
+<div class="content-box-blue">
+
+### <span style="color:#034a94">**Definición Varianza**</span>
+
+$$V[X] = E[X^{2}]-(E[X])^{2}  = E[X^{2}]-\mu^{2}$$ 
+
+</div> 
+
+<br/><br/>
+
+<div class="content-box-blue">
+
+## <span style="color:#034a94">**Propiedades de la varianza**</span>
+
++ $V[X] \geq 0$
+
++ $V[k] = 0$, para todo número real $k$
+
++ $V[X + k]  = V[X]$, para todo número real $k$
+
++ $V[kX] = k^{2}V[X]$, para todo número real $k$ 
+
++ $V[aX + bY] = a^{2}V[X] + b^{2}V[Y] + 2ab \hspace{.2cm}Cov[XY]$, siendo $a$ y $b$ números reales. 
+
+En el caso se ser X y Y variables aleatorias independientes la igualdad será: $$V[aX + bY] = a^{2}V[X] + b^{2}V[Y]$$ 
+
+</div> 
+
+<br/><br/><br/>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
+
+El valor esperado y la varianza para el número de personas que asisten al restaurante, con la siguiente función de distribución: 
+
+$$f_{_{X}}(x) = \left \{ 
+\begin{matrix} 
+	\displaystyle\binom{20}{x}(0.7)^{x}(0.3)^{20-x} & \mbox{si }	x=0,1,2,\ldots,20\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.  
+$$
+
+
+
+
+<br/>
+
+$$E(X)=\displaystyle\sum\limits_{x=0}^{20}x_{i} 	\displaystyle\binom{20}{x_{i}}(0.7)^{x_{i}}(0.3)^{20-x_{i}} = 14$$ 
+<br/>
+
+Se puede verificar que $V[X] = E[X^2] - E[X]^2 = 4.199829$
+
+<br/>
+
+
+Este resultado nos indica que en promedio asisten al restaurante 14 personas de las veinte reservas aceptadas, con una varianza de 4.2 de la cual podemos obtener la desviación estándar y el coeficiente de variación
+
+<br/><br/>
+
+### <span style="color:#FF7F00"> **Ejemplo**</span>
+
+Para el caso continuo retomamos la función: 
+
+$$f_{_{X}}(x) = \left \{ 
+\begin{matrix} 
+	\dfrac{1}{4} e^{-x/4} & \mbox{ , }	x \geq 0\\ 
+	& \\
+	0  & \mbox{en otro caso }
+\end{matrix}\right.$$
+
+Que define la variable tiempo de duración de un electrodoméstico si realizar alguna reparación
+
+<br/>
+
+$$E(X)=\displaystyle\int\limits_{-\infty}^{+\infty } \dfrac{x}{4} e^{-x/4}  \:dx  = 4$$
+
+Se puede verificar que $V[X] = 16$
+
+Esto nos indica que el valor esperado correspondiente al tiempo en que una lavadora requiere una reparación mayor es de 4 años.  Para la interpretación de la varianza podemos utilizar el concepto de desviación estándar o de coeficiente de variación.
+
+<br/><br/><br/><br/>
