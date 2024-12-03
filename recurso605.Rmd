@@ -48,7 +48,7 @@ Podemos estar interesado en uno de los tres casos siguientes
 |$Ha$ : $\mu \neq \mu_o$          |$Ha$ : $\mu > \mu_o$          |$Ha$ : $\mu < \mu_o$              |
 
 
-Además se presentan tres alernativas para el estadístico de prueba:
+Además se presentan tres alternativas para el estadístico de prueba:
 
 * Prueba Z, con varianza conocida y X con distribución normal.
 * Prueba t, con varianza desconocida y X con distribución normal.
@@ -119,13 +119,13 @@ t1=table(CarreraLuz22$sex)
 
 prop.test(t1[1],length(CarreraLuz22$sex),0.50,alternative="greater")
 ```
-El resultado indica que la mayoria de los participantes son hombres
+El resultado indica que la mayoría de los participantes son hombres
 
 <br/><br/>
 
 ## <span style="color:#034a94">**Para la comparación de medias en grupos independientes**</span>
 
-Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables, en caso de asumir que las variables tienen distribución nomral, se procede a comparar las varianzas de los dos grupos  y dependiendo el resultado obtenido se procede a realizar la comparación de medias. en caso de no obtener normalidad o de que las variables procedan de mediciones a través de test en escalas de intercalo (caso de mediciones de clima laboral, nivel de estres, percepcines, entre otros) o de poseer pocos datos se recomienda emplear métodos no paramétricos.
+Previamente a realizar la comparación de medias se deben realizar las pruebas de normalidad para cada una de las variables, en caso de asumir que las variables tienen distribución normal, se procede a comparar las varianzas de los dos grupos  y dependiendo el resultado obtenido se procede a realizar la comparación de medias. en caso de no obtener normalidad o de que las variables procedan de mediciones a través de test en escalas de intercalo (caso de mediciones de clima laboral, nivel de estrés, percepciones, entre otros) o de poseer pocos datos se recomienda emplear métodos no paramétricos.
 
 
 
@@ -202,7 +202,7 @@ Ahora supongamos que un grupo de atletas corrió tambien en el 2021 ($xMa$) y re
 t.test(xMa,xMd,paired = TRUE)
 ```
 
-Los reultados indican que los promedios se supomen iguales
+Los resultados indican que los promedios se suponen iguales
 
 
 

@@ -30,29 +30,29 @@ Existe un grupo de modelos identificados para las variables aleatorias tanto dis
 #### <span style="color:#034a94">**Modelos discretos**:</span>
 
 + Bernoulli, 
-+ binomial,
++ Binomial,
 + Poisson,
-+ geometrico,
-+ hipergeometrico,
-+ binomial negativo.
++ Geométrico,
++ Hipergeométrico,
++ Binomial negativo.
 
 <br/><br/>
 
 #### <span style="color:#034a94">**Modelos continuos**:</span>
 
-+ uniforme
-+ normal
-+ exponencial
-+ lognormal
-+ gamma
-+ beta
++ Uniforme
++ Normal
++ Exponencial
++ Lognormal
++ Gamma
++ Beta
 + Weibull
 + Cauchy
 + Gumbel
 + t-Student
 + Ji-cuadrado
 + F de Fisher
-+ Empirica o  Kernel
++ Empírica o  Kernel
 
 <br/><br/>
 
@@ -149,11 +149,11 @@ pbinom(7, 20, 0.30)
 3. Construir la tabla de los  valores de $f(x)$ y $F(x)$ para todo el rango de la variable
 
 ```{r}
-x=0:20                     # genera secuencia 0 al 20
-fx=dbinom(x, 20, 0.30)     # evalua f(x)
-fx=round(fx,4)             # redondea a 4 decimales
-Fx=pbinom(x, 20, 0.30)     # evalua en F(x)
-Fx=round(Fx,4)             # redondea a 4 decimales
+x=0:20                     # Genera secuencia 0 al 20
+fx=dbinom(x, 20, 0.30)     # Evalúa f(x)
+fx=round(fx,4)             # Redondea a 4 decimales
+Fx=pbinom(x, 20, 0.30)     # Evalúa en F(x)
+Fx=round(Fx,4)             # Redondea a 4 decimales
 ```
 
 <br/>
@@ -306,16 +306,16 @@ knitr::include_graphics("img/lamina.png")
 **Solución**
 
 ```{r}
-	X2=rnorm(1000,mean=2.0,sd=0.1)    #  generación de números aleatorios  de X
-	Y2=rnorm(1000,mean=3.0,sd=0.2)    #  generación de números aleatorios  de Y
-	Z2=data.frame(X2,Y2)              #  generación de matriz de X,Y
-	A2=apply(Z2,1,prod)               #  área de la placa A=XY
-	mediaA=mean(A2)                   #  media del vector de áreas 
-	varianzaA=var(A2)                 #  varianza del vector de áreas 
-	B2=as.numeric(A2>5.9 & A2<6.1)    #  generación de variable de 0,1. Con valor de 1 cundo se cumple la condición y cero en otros casos
-	Pro3c=sum(B2)/1000                #  calculo de la  probabilidad 
-	hist(A2)                          # histograma del valor de las áreas
-	qqnorm(A2)                        # gráfico de normalidad del área
+	X2=rnorm(1000,mean=2.0,sd=0.1)    #  Generación de números aleatorios  de X
+	Y2=rnorm(1000,mean=3.0,sd=0.2)    #  Generación de números aleatorios  de Y
+	Z2=data.frame(X2,Y2)              #  Generación de matriz de X,Y
+	A2=apply(Z2,1,prod)               #  Área de la placa A=XY
+	mediaA=mean(A2)                   #  Media del vector de áreas 
+	varianzaA=var(A2)                 #  Varianza del vector de áreas 
+	B2=as.numeric(A2>5.9 & A2<6.1)    #  Generación de variable de 0,1. Con valor de 1 cundo se cumple la condición y cero en otros casos
+	Pro3c=sum(B2)/1000                #  Calculo de la  probabilidad 
+	hist(A2)                          # Histograma del valor de las áreas
+	qqnorm(A2)                        # Gráfico de normalidad del área
 ```
 
 ```{r}

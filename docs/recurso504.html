@@ -14,7 +14,7 @@
 
 <title> Pruebas no paramétricas</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -434,8 +434,8 @@ distribuciones t-student, chi-cuadrado y F entre otras.</p>
 paramétricas
 <img src="img/pruebas.png" width="80%" style="display: block; margin: auto;" />
 </center>
-<p>En algunos casos es necesario recurir a las pruebas no paramétricas
-para el estudio de una media o para la diferendcia de medias tanto de
+<p>En algunos casos es necesario recurrir a las pruebas no paramétricas
+para el estudio de una media o para la diferencia de medias tanto de
 grupos pareados como de grupos independientes debido al incumplimiento
 de supuestos como se tratará mas adelante.</p>
 <p><br/></p>
@@ -489,7 +489,7 @@ rechazar Ho falsa)</li>
 <li>Prueba Wilcoxon</li>
 <li>Prueba de Mann-Whitney</li>
 <li>Prueba de Kruskal-Wallis</li>
-<li>Correlación de Rangos de Sperarman</li>
+<li>Correlación de Rangos de Spearman</li>
 </ul>
 <p><br/><br/></p>
 </div>
@@ -628,7 +628,7 @@ Numero de signos positivos</p>
 <li>en el valor 15 se omite el signo</li>
 </ul>
 <p>M+ = 13 Regla de Decisión (Distribución Binomial p=0.5 n= 17) <span
-class="math inline">\(P(X\leq 13) = 1-0.9755 = 0.0245\)</span> (
+class="math inline">\(P(X\leq 13) =  1-0.9755 =  0.0245\)</span> (
 valor-p)</p>
 </div>
 <div id="conclusión" class="section level3">
@@ -761,7 +761,7 @@ data:  obs
 X-squared = 3.6, df = 3, p-value = 0.308</code></pre>
 <p>Como el <span class="math inline">\(valor-p\)</span> es grande, no se
 rechaza la hipótesis nula, no existe suficiente evidencia en la muestra
-que permita su rechazo, asimimos que Ho es verdad, la demanda del
+que permita su rechazo, asumimos que Ho es verdad, la demanda del
 producto se puede asumir como uniforme. Se puede indicar al encargado de
 las compras que solicite igual cantidad de producto para cada marca.</p>
 <p><br/><br/></p>
@@ -775,8 +775,8 @@ estándar 0.7 puntos. Los datos se resumen en la siguiente tabla:</p>
 <tbody>
 <tr class="odd">
 <td align="left">Hipótesis Nula</td>
-<td align="left"><span class="math inline">\(H_o: X \sim
-normal\)</span></td>
+<td align="left"><span class="math inline">\(H_o: X
+\sim  normal\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">Hipótesis Alterna</td>
@@ -789,15 +789,15 @@ No} \sim normal\)</span></td>
 
 h=hist(nf, las=1, col=c2, main=&quot; &quot;, xlab=&quot; &quot;, ylab=&quot; &quot;)</code></pre>
 <p><img src="recurso504_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
-<pre class="r"><code>lim.nf=h$breaks               # cortes de los intervalos
-obs.nf=h$counts               # valores observados 
-mx=mean(nf)                   # media
-sdx=sd(nf)                    # desviación estandar
-Fx.nf=pnorm(lim.nf, mx,sdx)   # probabilidades en caso de que Ho sea verdadera
+<pre class="r"><code>lim.nf=h$breaks               # Cortes de los intervalos
+obs.nf=h$counts               # Valores observados 
+mx=mean(nf)                   # Media
+sdx=sd(nf)                    # Desviación estándar
+Fx.nf=pnorm(lim.nf, mx,sdx)   # Probabilidades en caso de que Ho sea verdadera
 prob.nf=Fx.nf[2:7]-Fx.nf[1:6]
-esp.nf=prob.nf+0.002300453    # ajuste para que el sum(esp.nf)=1
+esp.nf=prob.nf+0.002300453    # Ajuste para que el sum(esp.nf)=1
 
-chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste</code></pre>
+chisq.test(x=obs.nf,p=esp.nf) # Prueba de bondad de ajuste</code></pre>
 <pre><code>
     Chi-squared test for given probabilities
 
@@ -858,7 +858,7 @@ independientes</td>
 </tr>
 </tbody>
 </table>
-<p>El siguiente código da solución al constraste de las hipótesis</p>
+<p>El siguiente código da solución al contraste de las hipótesis</p>
 <pre class="r"><code>m=c(20,40,15,11,8,6)
 m=as.table(matrix(m,nrow=3))
 rownames(m)=c(&quot;Bueno&quot;, &quot;Regular&quot;, &quot;Malo&quot;)
@@ -905,7 +905,7 @@ Wilcoxon</strong></span></h3>
 <td align="left">Determinar su la diferencia entre la magnitud de las
 diferencias positivas entre los valores de las dos variables y la
 magnitud de las diferencias negativas es estadística mente
-significativas. Versión no parametrica de la prueba t para muestras
+significativas. Versión no paramétrica de la prueba t para muestras
 pareadas</td>
 </tr>
 </tbody>
@@ -933,19 +933,19 @@ paramétrica.</p>
 <tbody>
 <tr class="odd">
 <td align="left"><span class="math inline">\(H_o\)</span> : <span
-class="math inline">\(Me_{g1} \leq Me_{g2}\)</span></td>
+class="math inline">\(Me_{g1} \leq   Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math inline">\(H_a\)</span> : <span
-class="math inline">\(Me_{g1} &gt; Me_{g2}\)</span></td>
+class="math inline">\(Me_{g1} &gt;  Me_{g2}\)</span></td>
 <td align="left"></td>
 </tr>
 </tbody>
 </table>
 <pre class="r"><code>g1=c(68,32,58,16,23,53,55,32,61,29,50,64,67,37)
 g2=c(39,10,21,29,11,26,7,12,28,32,30,27,50,19,24)
-# independent 2-group Mann-Whitney U Test 
+# Prueba U de Mann-Whitney para 2 grupos independientes
 wilcox.test(g1,g2,paired = FALSE,alternative = &quot;greater&quot;)</code></pre>
 <pre><code>
     Wilcoxon rank sum test with continuity correction
@@ -987,7 +987,7 @@ Kruskal-Wallis</strong></span></h3>
 <td align="left">Objetivo</td>
 <td align="left">Determinar si las diferencias entre las medias de los
 rangos (asignados a las observaciones ordenadas) en los k grupos son
-estadísticamente significativas. Versión no parametrica del ANOVA.</td>
+estadísticamente significativas. Versión no paramétrica del ANOVA.</td>
 </tr>
 </tbody>
 </table>
@@ -1128,9 +1128,9 @@ alternative hypothesis: true rho is not equal to 0
 sample estimates:
       rho 
 0.8139814 </code></pre>
-<p>En este caso se utiliza el coeficiente de correlación de Sperman para
-valorar la relación entre las variables debido a que la nota es una
-variable que podríamos llamar cualitativa, operacionalizada cuntitativa
+<p>En este caso se utiliza el coeficiente de correlación de Spearman
+para valorar la relación entre las variables debido a que la nota es una
+variable que podríamos llamar cualitativa, operacionalizada cuantitativa
 con una nota.</p>
 <p><br/><br/></p>
 </div>
@@ -1165,8 +1165,7 @@ runs.test(y)</code></pre>
     Runs Test
 
 data:  y
-statistic = 0.40204, runs = 53, n1 = 50, n2 = 50, n = 100, p-value =
-0.6877
+statistic = 0, runs = 51, n1 = 50, n2 = 50, n = 100, p-value = 1
 alternative hypothesis: nonrandomness</code></pre>
 </div>
 <div id="conclusión-2" class="section level3">
@@ -1197,7 +1196,7 @@ distribución Normal</td>
 </table>
 <p>Existen muchas pruebas que nos ayudan en este propósito, a
 continuación relacionamos algunas de ellas</p>
-<pre class="r"><code># se genera una variable aleatoria normal
+<pre class="r"><code># Se genera una variable aleatoria normal
 x=rnorm(200,1000,50)
 plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &quot;, col=c3, lwd=4)</code></pre>
 <p><img src="recurso504_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
@@ -1206,7 +1205,7 @@ plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &q
     Shapiro-Wilk normality test
 
 data:  x
-W = 0.9949, p-value = 0.7348</code></pre>
+W = 0.99289, p-value = 0.4463</code></pre>
 <p>Esta prueba no requiere la instalación de paquetes adicionales, pues
 está disponible en la configuración básica de R</p>
 <p>Como el valor-p es superior al nivel de significancia <span
@@ -1232,13 +1231,13 @@ lillie.test(x) # Kolmogorov-Smirnov</code></pre>
     Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x
-D = 0.044914, p-value = 0.4184</code></pre>
+D = 0.034015, p-value = 0.8283</code></pre>
 <pre class="r"><code>pearson.test(x) # chi-cuadrado de Pearson</code></pre>
 <pre><code>
     Pearson chi-square normality test
 
 data:  x
-P = 13.35, p-value = 0.4992</code></pre>
+P = 13.69, p-value = 0.4731</code></pre>
 <p><br/><br/><br/><br/></p>
 </div>
 

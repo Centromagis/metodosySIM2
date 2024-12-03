@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/>
 
-La probabilidad es un número entre cero y uno que se asigna a cada resultado de un evento aleatorio, mediante diferentes enfoques.  A continuación se definen los enfoque:
+La probabilidad es un número entre cero y uno que se asigna a cada resultado de un evento aleatorio, mediante diferentes enfoques.  A continuación se definen los enfoques:
 
 * Clásico o a priori
 * Frecuentista
@@ -45,7 +45,7 @@ $P(A_{2})=\dfrac{n(A_{2})}{n(S_{2})}=\dfrac{9}{36}=0.25$
 <br/><br/> 
 
 
-En la gran mayoría de casos no se cumplen los supuestos anteriores (eventos equiprobables o con igual probabilidad), pues se tienen eventos con diferentes probablilidades, lo cual impide que podamos utilizar el enfoque clásico. 
+En la gran mayoría de casos no se cumplen los supuestos anteriores (eventos equiprobables o con igual probabilidad), pues se tienen eventos con diferentes probabilidades, lo cual impide que podamos utilizar el enfoque clásico. 
 
 Ente este problemas debemos suponer que lo ocurrido en el pasado seguirá pasando y así mediante el  estudiando la información recogida podemos predecir la posibilidad de ocurrencia de un evento futuro.
 

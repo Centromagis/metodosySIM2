@@ -159,8 +159,7 @@ $$P(\text{No rechazar } H_o | H_o \text{ es falsa}) $$
 
 ### <span style="color:#FF7F00"> **Ejemplo**</span>
 
-Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadounidense Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de dopin, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practicados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo. 
-
+Para ilustrar el caso del error tipo II, recurrimos a lo acontecido en el Tour de Francia, donde el ciclista estadounidense Lance Armstrong gano esta competencia seis veces de manera consecutiva y aunque fue acusado de doping, no se le pudo comprobar. Fue solo en el 2012 cuando el mismo admitió haber usado EPO. Podemos decir que durante su vida deportiva los exámenes practicados dieron negativos, estando el dopado. Este caso se cataloga como falso negativo.
 <br/><br/>
 
 ## <span style="color:#034a94">**Nivel de significancia ($\alpha$)**</span>  

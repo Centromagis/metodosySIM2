@@ -109,7 +109,7 @@ sum(fxy)
 El gráfico de la función de distribución conjunta se puede realizar de la siguiente forma:
 
 <center>
-```{r, echo=FALSE}
+```{r, eval=FALSE}
 x=c(0,0,0,1,1,1,2,2,2)
 y=c(0,1,2,0,1,2,0,1,2)
 fxy=c(0.05,0.05,0, 0.05,0.10,0.20, 0.10,0.35,0.10)
@@ -125,6 +125,13 @@ col.panel ="steelblue",
 col.grid = "darkblue",
 add_lines=TRUE)
 ```
+
+
+
+```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+knitr::include_graphics("img/plot3Discretas.png")
+```
+
 
 **Figura 2.16** Distribución conjunta discreta-discreta 
 </center>
@@ -219,7 +226,7 @@ Fxy
 
 ### <span style="color:#034a94">**Probabilidad condicional**</span>
 
-En el caso de la función de probabilidad condicional se opera de la misma forma como se definió  la probabibilidad condicional: 
+En el caso de la función de probabilidad condicional se opera de la misma forma como se definió  la probabilidad condicional: 
 
 $$P(B|A)=\dfrac{P(A \cap B)}{P(A)}$$
 
@@ -296,7 +303,7 @@ En particular para $f_{_{X,Y}}(x,y)$ definida en una región $R$, se cumple que 
 
 ### <span style="color:#034a94">**Función de densidad conjunta**</span>
 
-Lafunción de densidad conjunta para las variables $X$ y $Y$ $f(x,y)$ debe cumplir las siguientes condiciones.
+La función de densidad conjunta para las variables $X$ y $Y$ $f(x,y)$ debe cumplir las siguientes condiciones.
 
 
 * $f(x,y) \geq 0$, para todo valor de $(x,y)$

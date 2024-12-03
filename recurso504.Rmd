@@ -45,7 +45,7 @@ knitr::include_graphics("img/pruebas.png")
 ```
 </center>
 
-En algunos casos es necesario recurir a las pruebas no paramétricas para el estudio de una media o para la diferendcia de medias tanto de grupos pareados como de grupos independientes debido al incumplimiento de supuestos como se tratará mas adelante.
+En algunos casos es necesario recurrir a las pruebas no paramétricas para el estudio de una media o para la diferencia de medias tanto de grupos pareados como de grupos independientes debido al incumplimiento de supuestos como se tratará mas adelante.
 
 <br/>
 
@@ -89,7 +89,7 @@ Entre las principales pruebas no paramétricas están :
 + Prueba Wilcoxon
 + Prueba de Mann-Whitney
 + Prueba de Kruskal-Wallis
-+ Correlación de Rangos de Sperarman
++ Correlación de Rangos de Spearman
 
 <br/><br/>
 
@@ -180,7 +180,7 @@ esp=c(0.25,0.25,0.25,0.25)
 chisq.test(x=obs,p=esp)
 ```
 
-Como el $valor-p$ es grande, no se rechaza la hipótesis nula, no existe suficiente evidencia en la muestra que permita su rechazo, asimimos que Ho es verdad, la demanda del producto se puede asumir como uniforme. Se puede indicar al encargado de las compras que solicite igual cantidad de producto para cada marca.
+Como el $valor-p$ es grande, no se rechaza la hipótesis nula, no existe suficiente evidencia en la muestra que permita su rechazo, asumimos que Ho es verdad, la demanda del producto se puede asumir como uniforme. Se puede indicar al encargado de las compras que solicite igual cantidad de producto para cada marca.
 
 <br/><br/>
 
@@ -197,15 +197,15 @@ Un profesor desea establecer si los resultados obtenidos por sus estudiantes tie
 nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=" ", xlab=" ", ylab=" ")
-lim.nf=h$breaks               # cortes de los intervalos
-obs.nf=h$counts               # valores observados 
-mx=mean(nf)                   # media
-sdx=sd(nf)                    # desviación estandar
-Fx.nf=pnorm(lim.nf, mx,sdx)   # probabilidades en caso de que Ho sea verdadera
+lim.nf=h$breaks               # Cortes de los intervalos
+obs.nf=h$counts               # Valores observados 
+mx=mean(nf)                   # Media
+sdx=sd(nf)                    # Desviación estándar
+Fx.nf=pnorm(lim.nf, mx,sdx)   # Probabilidades en caso de que Ho sea verdadera
 prob.nf=Fx.nf[2:7]-Fx.nf[1:6]
-esp.nf=prob.nf+0.002300453    # ajuste para que el sum(esp.nf)=1
+esp.nf=prob.nf+0.002300453    # Ajuste para que el sum(esp.nf)=1
 
-chisq.test(x=obs.nf,p=esp.nf) # prueba de bondad de ajuste
+chisq.test(x=obs.nf,p=esp.nf) # Prueba de bondad de ajuste
 
 ```
 
@@ -251,7 +251,7 @@ knitr::include_graphics("img/tabla_chi.png")
 | $Ha$ : |Las variables lugar de residencia y calificación no son independientes  |
 |                                                                                |
 
-El siguiente código da solución al constraste de las hipótesis
+El siguiente código da solución al contraste de las hipótesis
 
 ```{r}
 m=c(20,40,15,11,8,6)
@@ -277,7 +277,7 @@ Como p-value = 0.1543 lo podemos considerar grande, no se rechaza $Ho$, asumimos
 |:---------- |:----------------------------------------------------------------|
 No. de grupos|	2                                                              |
 Variable dependiente| En escala al menos ordinal                               |	
-Objetivo	          | Determinar su la diferencia entre la magnitud de las diferencias positivas entre los valores de las dos variables y la magnitud de las diferencias negativas es estadística mente significativas. Versión no parametrica de la prueba t para muestras pareadas                   |
+Objetivo	          | Determinar su la diferencia entre la magnitud de las diferencias positivas entre los valores de las dos variables y la magnitud de las diferencias negativas es estadística mente significativas. Versión no paramétrica de la prueba t para muestras pareadas                   |
 
 <br/><br/>
 
@@ -302,7 +302,7 @@ Antes de realizar la comparación de medias, se debe realizar una prueba de bond
 ```{r}
 g1=c(68,32,58,16,23,53,55,32,61,29,50,64,67,37)
 g2=c(39,10,21,29,11,26,7,12,28,32,30,27,50,19,24)
-# independent 2-group Mann-Whitney U Test 
+# Prueba U de Mann-Whitney para 2 grupos independientes
 wilcox.test(g1,g2,paired = FALSE,alternative = "greater")
 ```
 
@@ -325,7 +325,7 @@ Por lo tanto los estudiantes sanos presentan consumo de calorías menores que lo
 |:---------- |:----------------------------------------------------------------|
 Numero de grupos |		k                                                        |
 Variable dependiente |	En escala al menos ordinal	                           |
-Objetivo	            |Determinar si las diferencias entre las medias de los rangos (asignados a las observaciones ordenadas) en los k grupos son estadísticamente significativas. Versión no parametrica del ANOVA. 
+Objetivo	            |Determinar si las diferencias entre las medias de los rangos (asignados a las observaciones ordenadas) en los k grupos son estadísticamente significativas. Versión no paramétrica del ANOVA. 
 
 <br/><br/>
 
@@ -378,7 +378,7 @@ plot(x,y, las=1, pch=19, col=c4)
 
 cor.test(x,y, method = "spearman",continuity = FALSE,conf.level = 0.95)
 ```
-En este caso se utiliza el coeficiente de correlación de Sperman para valorar la relación entre las variables debido a que la nota es una variable que podríamos llamar cualitativa, operacionalizada cuntitativa con una nota.
+En este caso se utiliza el coeficiente de correlación de Spearman para valorar la relación entre las variables debido a que la nota es una variable que podríamos llamar cualitativa, operacionalizada cuantitativa con una nota.
 
 
 <br/><br/>
@@ -420,7 +420,7 @@ Uno de los procedimientos mas utilizados en estadística es la relacionada con l
 
 Existen muchas pruebas que nos ayudan en este propósito, a continuación relacionamos algunas de ellas 
 ```{r}
-# se genera una variable aleatoria normal
+# Se genera una variable aleatoria normal
 x=rnorm(200,1000,50)
 plot(density(x), main=" ", las=1, xlab = " ", ylab=" ", col=c3, lwd=4)
 ```

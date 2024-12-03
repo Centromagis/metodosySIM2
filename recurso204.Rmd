@@ -91,7 +91,7 @@ $$V[X]= pq$$
 
 <br/>
 
-El modelo **binomial**, que puede verse como una generalización del modelo Bernoulli, pasando de un ensayo a $n$ ensayos. Fue investigada y analizada por el físico y matemático suizo Jakob Bernoulli en relación con problemas presentados en los juegos de azar. Su trabajo fue presentado en 1713. 
+El modelo **binomial**, que puede verse como una generalización del modelo Bernoulli, pasando de un ensayo a $n$ ensayos. Fue investigada y analizada por el físico y matemático suizo Jacob Bernoulli en relación con problemas presentados en los juegos de azar. Su trabajo fue presentado en 1713. 
 
 <br/>
 
@@ -113,7 +113,7 @@ Ahora un experimento binomial tiene las siguientes características:
 
 * La variable objeto de estudio $X$, corresponde al **número de éxitos obtenidos en los $n$ ensayos**.
 
-* Se puede decir que la suma de $n$ variables independientes con distribución Bernoulli($p$), se distribuye de manera Bionomial($n,p$)
+* Se puede decir que la suma de $n$ variables independientes con distribución Bernoulli($p$), se distribuye de manera Binomial($n,p$)
 
 La función de distribución de probabilidad está dada por:
 
@@ -160,7 +160,7 @@ labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 
 <br/>
 
-El modelo **Poisson** fue plantea por el físico y matemático francés Siméon-Denis Poissonen uno de sus trabajos presentado en 1838 relacionado con temas sobre juicios en temas criminales y civiles. Es  utilizado para resolver problemas asociados con el número de eventos que ocurren en un intervalo de tiempo o espacio, como por ejemplo:
+El modelo **Poisson** fue plantea por el físico y matemático francés Siméon-Denis Poisson en uno de sus trabajos presentado en 1838 relacionado con temas sobre juicios en temas criminales y civiles. Es  utilizado para resolver problemas asociados con el número de eventos que ocurren en un intervalo de tiempo o espacio, como por ejemplo:
 
 * número de llamadas que recibe un conmutador durante una hora
 
@@ -174,7 +174,7 @@ El modelo **Poisson** fue plantea por el físico y matemático francés Siméon-
 
 <div class="content-box-blue">
 
-### <span style="color:#034a94">**Distribución Pisson**</span>
+### <span style="color:#034a94">**Distribución Poisson**</span>
 
 La función de distribución de probabilidad de una variable con distribución Poisson esta dada por siguiente la expresión:
 
@@ -222,7 +222,7 @@ labels = c('0','1','2','3','4','5','6','7','8','9','10'))
 
 
 
-## <span style="color:#034a94">**hipergeometrico**</span>
+## <span style="color:#034a94">**hipergeométrico**</span>
 
 Este modelo **hipergeométrico** nace de la necesidad de modelar eventos Bernoulli con probabilidad no constante generados en elecciones sin repetición. 
 
@@ -230,7 +230,7 @@ Este modelo **hipergeométrico** nace de la necesidad de modelar eventos Bernoul
 
 <div class="content-box-blue">
 
-### <span style="color:#034a94">**Distribución hipergeometrica**</span> 
+### <span style="color:#034a94">**Distribución hipergeométrica**</span> 
 
 Se tiene un conjunto de $N$ objetos que contiene $K$ objetos clasificados como éxitos y $N-K$ objetos clasificados como fracasos. Una muestra de tamaño $n$ objetos es seleccionada al azar (sin reemplazo) de la población de $N$ objetos, donde $K \leq N$ y $n \leq N $. La variable de interés $X$ corresponde al **número de éxitos obtenidos en la muestra**. 
 
@@ -268,15 +268,15 @@ breaks = c(5,6,7,8,9,10),
 labels = c('5','6','7','8','9','10'))
 ```
 <br/>
-**Figura 2.20** Función de distribución hipergeometrica $X \sim hyperg(x, m=95, n=5, k=10)$
+**Figura 2.20** Función de distribución hipergeométrica $X \sim hyperg(x, m=95, n=5, k=10)$
 </center>
 
 <br/><br/>
 
 
-## <span style="color:#034a94">**geométrico o de Pascal**</span>
+## <span style="color:#034a94">**geométrica o de Pascal**</span>
 
-La distribución **geométrica** también conocida como distribución de Pascal, fue esbozada en el escrito El arte de la conjetura, escrita por Jakob Bernoulli. Esta distribución modela el número de ensayos Bernoulli necesarios para obtener el primer éxito. Los valores que puede tomar esta variable son:
+La distribución **geométrica** también conocida como distribución de Pascal, fue esbozada en el escrito El arte de la conjetura, escrita por Jacob Bernoulli. Esta distribución modela el número de ensayos Bernoulli necesarios para obtener el primer éxito. Los valores que puede tomar esta variable son:
 
 <br/>
 
@@ -342,7 +342,7 @@ labels = c('1','2','3','4','5','6','7','8','9','10'))
 </center>
 <br/><br/>
 
-## <span style="color:#034a94">**binomial negativo**</span>
+## <span style="color:#034a94">**binomial negativa**</span>
 
 <br/>
 

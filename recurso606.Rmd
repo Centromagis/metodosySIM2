@@ -244,9 +244,9 @@ ad.test(w)
 
 ### <span style="color:#034a94">**Prueba de Cramer-von Mises**</span>
 
-La prueba de Cramér-von Mises es una prueba de bondad de ajuste que se utiliza para verificar si una muestra de datos sigue una distribución teórica específica, como una distribución normal. Esta prueba es una alternativa a la prueba de Anderson-Darling y a la prueba de Kolmogorov-Smirnov, y se basa en la comparación de los valores acumulados observados y los valores acumulados esperados bajo la distribución teórica.
+La prueba de Cramer-von Mises es una prueba de bondad de ajuste que se utiliza para verificar si una muestra de datos sigue una distribución teórica específica, como una distribución normal. Esta prueba es una alternativa a la prueba de Anderson-Darling y a la prueba de Kolmogorov-Smirnov, y se basa en la comparación de los valores acumulados observados y los valores acumulados esperados bajo la distribución teórica.
 
-La prueba de Cramér-von Mises es especialmente útil cuando se desea evaluar si los datos siguen una distribución específica en lugar de simplemente evaluar si los datos son normales. Esta prueba es sensible a las desviaciones de la distribución en la cola, lo que la hace útil para detectar desviaciones no solo en la media y la varianza, sino también en la forma de la distribución.
+La prueba de Cramer-von Mises es especialmente útil cuando se desea evaluar si los datos siguen una distribución específica en lugar de simplemente evaluar si los datos son normales. Esta prueba es sensible a las desviaciones de la distribución en la cola, lo que la hace útil para detectar desviaciones no solo en la media y la varianza, sino también en la forma de la distribución.
 
 
 ```{r}

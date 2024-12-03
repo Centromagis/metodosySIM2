@@ -14,7 +14,7 @@
 
 <title> Variables conjuntas</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -544,7 +544,21 @@ fxy</code></pre>
 <p>El gráfico de la función de distribución conjunta se puede realizar
 de la siguiente forma:</p>
 <center>
-<p><img src="recurso203_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>x=c(0,0,0,1,1,1,2,2,2)
+y=c(0,1,2,0,1,2,0,1,2)
+fxy=c(0.05,0.05,0, 0.05,0.10,0.20, 0.10,0.35,0.10)
+
+plot3D::scatter3D(x, y, fxy,
+colvar = NULL, 
+col = &quot;blue&quot;,
+pch = 19, cex = 1,
+phi = 15, theta = 45,  
+zlab=&quot;f(xy)&quot;, xlab=&quot;x&quot;, ylab=&quot;y&quot;,
+bty = &quot;b2&quot;,
+col.panel =&quot;steelblue&quot;,
+col.grid = &quot;darkblue&quot;,
+add_lines=TRUE)</code></pre>
+<p><img src="img/plot3Discretas.png" width="40%" style="display: block; margin: auto;" /></p>
 <strong>Figura 2.16</strong> Distribución conjunta discreta-discreta
 </center>
 <p><br/><br/></p>
@@ -647,7 +661,7 @@ Fxy</code></pre>
 <h3><span style="color:#034a94"><strong>Probabilidad
 condicional</strong></span></h3>
 <p>En el caso de la función de probabilidad condicional se opera de la
-misma forma como se definió la probabibilidad condicional:</p>
+misma forma como se definió la probabilidad condicional:</p>
 <p><span class="math display">\[P(B|A)=\dfrac{P(A \cap
 B)}{P(A)}\]</span></p>
 <p>Para el caso de las funciones de distribución de probabilidad se
@@ -785,7 +799,7 @@ class="math inline">\(R\)</span>.</p>
 class="section level3 content-box-blue">
 <h3><span style="color:#034a94"><strong>Función de densidad
 conjunta</strong></span></h3>
-<p>Lafunción de densidad conjunta para las variables <span
+<p>La función de densidad conjunta para las variables <span
 class="math inline">\(X\)</span> y <span
 class="math inline">\(Y\)</span> <span
 class="math inline">\(f(x,y)\)</span> debe cumplir las siguientes
@@ -794,7 +808,7 @@ condiciones.</p>
 <li><p><span class="math inline">\(f(x,y) \geq 0\)</span>, para todo
 valor de <span class="math inline">\((x,y)\)</span></p></li>
 <li><p><span class="math inline">\(\int_{-\infty}^{\infty}
-\int_{-\infty}^{\infty} f(x,y) \:dx \:dy = 1\)</span></p></li>
+\int_{-\infty}^{\infty} f(x,y) \:dx \:dy  = 1\)</span></p></li>
 </ul>
 </div>
 <p><br/><br/></p>
@@ -814,12 +828,14 @@ class="math inline">\(f_{XY}\)</span> como se presenta a continuación
 <p>Inicialmente debemos de verificar que se trata de una función de
 densidad</p>
 <p><span class="math inline">\(\displaystyle\int_{0}^{1}
-\displaystyle\int_{0}^{1} (x+y) \:dx \:dy = \displaystyle\int_{0}^{1}
-\Bigg( \dfrac{x^{2}}{2}+ yx \Bigg|_{0}^{1} \Bigg) \:dy\)</span></p>
+\displaystyle\int_{0}^{1} (x+y) \:dx \:dy  =
+\displaystyle\int_{0}^{1}  \Bigg( \dfrac{x^{2}}{2}+ yx
+\Bigg|_{0}^{1}  \Bigg) \:dy\)</span></p>
 <p><br/></p>
-<p><span class="math inline">\(\displaystyle\int_{0}^{1} \Bigg(
+<p><span class="math inline">\(\displaystyle\int_{0}^{1}  \Bigg(
 \dfrac{{1}}{2}+ y \Bigg) \:dy =\Bigg(\dfrac{1}{2}y + \dfrac{y^{2}}{2}
-\Bigg|_{0}^{1} \Bigg) = \dfrac{1}{2}\times \dfrac{1}{2} = 1\)</span></p>
+\Bigg|_{0}^{1} \Bigg) = \dfrac{1}{2}\times  \dfrac{1}{2} =
+1\)</span></p>
 <p><br/><br/></p>
 <pre class="r"><code>library(cubature)
 fxy&lt;- function(x){(x[1]+ x[2])}

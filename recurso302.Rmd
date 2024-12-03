@@ -143,7 +143,7 @@ $$\widehat{\sigma^{2}}=8550$$
 
 ## <span style="color:#034a94">**Método de Máxima Verosimilitud**</span>
 
-Uno de los mejores métodos para obtener un estimador puntual de un parámetro es el método de **Máxima Verosimilitud** o de máxima probabilidad. Esta técnica fue desarrollada en 1920 por el estadístico britanico Sir R.A. Fisher, afirmando que el estimador será el valor del parámetro que maximice la función de verosimilitud $L(\theta)$. \\ \\
+Uno de los mejores métodos para obtener un estimador puntual de un parámetro es el método de **Máxima Verosimilitud** o de máxima probabilidad. Esta técnica fue desarrollada en 1920 por el estadístico británico Sir R.A. Fisher, afirmando que el estimador será el valor del parámetro que maximice la función de verosimilitud $L(\theta)$. \\ \\
 
 La función de verosimilitud $L(\theta)$ corresponde a la función de distribución conjunta de variables aleatorias independientes con igual función de distribución. Estas variables aleatorias corresponden a las variables que conforman la muestra.
 %
@@ -223,7 +223,7 @@ knitr::include_graphics("img/Distribuciones.png")
 
 Si una variable **X** se distribuye **normal** con parámetros $\mu$ y $\sigma^{2}$, entonces a partir de su transformación se puede obtener una variable **Z** que tenga distribución **normal estándar** $N(0,1)$, que tiene media cero y varianza uno. Varias normales estándar al cuadrado conforman una variable con distribución **chi-cuadrado** y a su vez esta variable tiene la propiedad tal que la suma de $n$ variables aleatorias $\chi^{2}$ con $n-1$ grados de libertad. La razón de una variable con distribución normal estándar y la raíz cuadrada de una variable chi-cuadrado, dividida por sus grados de libertad originan una variable con distribución **t-student**. Por último la razón de dos variables con distribución chi-cuadrado, divididas cada una por sus respectivos grados de libertad, generan una variable con distribución  **F-Fisher**. 
 
-En sintesis, la distribuciones de muestreo básicas, tienen de base la distribución normal.
+En síntesis, la distribuciones de muestreo básicas, tienen de base la distribución normal.
 
 <br/><br/>
 
@@ -260,7 +260,7 @@ Esta distribución es un caso especial de la distribución Gamma con parámetros
 
 <br/><br/>
 
-## <span style="color:#034a94">**Distrución t-student**</span>
+## <span style="color:#034a94">**Distribución t-student**</span>
 
 <br/>
 

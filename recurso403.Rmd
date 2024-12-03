@@ -65,23 +65,23 @@ Tomado de Navidi(2006)
 <br/><br/>
 
 ```{r}
-x=c( 7.69, 4.97, 4.56, 6.49, 4.34, 6.24, 4.45) # datos muestra
-boot=sample(x,7000,replace=TRUE)   # se extraen n x m muestras
-b=matrix(boot,nrow=1000,ncol=7)    # se construye matriz de n x m 
-mx=apply(b,1,mean)                 # se calculan m medias por fila
+x=c( 7.69, 4.97, 4.56, 6.49, 4.34, 6.24, 4.45) # Datos muestra
+boot=sample(x,7000,replace=TRUE)   # Se extraen n x m muestras
+b=matrix(boot,nrow=1000,ncol=7)    # Se construye matriz de n x m 
+mx=apply(b,1,mean)                 # Se calculan m medias por fila
 ```
 
 <br/><br/>
 
 ```{r}
-ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
+ic1=quantile(mx, probs=c(0.025, 0.975)) # Se calcula IC método 1
 ic1
 ```
 
 <br/><br/>
 
 ```{r}
-ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
+ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # Se calcula IC método 2
 ic2
 ```
 

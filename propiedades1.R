@@ -1,6 +1,5 @@
-#R version 3.3.2 
-# Propiedade de los estimadores
-# Para una variable con distribucion uniforme
+# Propiedades de los estimadores
+# Para una variable con distribución uniforme
 # U(a=0, b=20) se desea determinar las 
 #propiedades que tienen los siguientes 
 # estimadores del parámetro b.

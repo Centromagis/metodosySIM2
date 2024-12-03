@@ -14,7 +14,7 @@
 
 <title> Probabilidad</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -425,8 +425,8 @@ $(document).ready(function () {
 <p></br></br></p>
 <p>A continuación se presentan una serie de códigos relacionados el
 calculo de probabilidades</p>
-<div id="simulacion-del-lanzamiento-de-un-dados" class="section level2">
-<h2><span style="color:#034a94"><strong>Simulacion del lanzamiento de un
+<div id="simulación-del-lanzamiento-de-un-dados" class="section level2">
+<h2><span style="color:#034a94"><strong>Simulación del lanzamiento de un
 dados</strong></span></h2>
 <p>Para simular el lanzamiento de un dado utilizaremos la función
 <code>sample(x, size, replace = FALSE, prob = NULL)</code>, con
@@ -435,21 +435,21 @@ parámetros: <code>x</code> : valores del espacio muestral;
 determinar si la selección se realiza con remplazo o sin remplazo.</p>
 <p><code>sample(1:6,2000, replace = TRUE)</code>, da un resultado una
 muestra de 2000 valores enteros entre 1 y 6, con repetición.</p>
-<pre class="r"><code>n=20000                            # tamaño de la muestra
-x=sample(1:6,n, replace = TRUE)  # extracción de la muestra 
-td1=prop.table(table(x))         # tabla de los resultados
-barplot(td1, las=1, ylim = c(0,0.2))              # gráfico de los resultados</code></pre>
+<pre class="r"><code>n=20000                            # Tamaño de la muestra
+x=sample(1:6,n, replace = TRUE)  # Extracción de la muestra 
+td1=prop.table(table(x))         # Tabla de los resultados
+barplot(td1, las=1, ylim = c(0,0.2))              # Gráfico de los resultados</code></pre>
 <p><img src="recurso601_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <p></br></br></p>
 </div>
 <div id="lanzamiento-de-dos-dados" class="section level2">
 <h2><span style="color:#034a94"><strong>Lanzamiento de dos
 dados</strong></span></h2>
-<pre class="r"><code>n=5000                               # tamaño de muestra
-d1=sample(1:6,n, replace = TRUE)    # muestra dado 1
-d2=sample(1:6,n, replace = TRUE)    # muestra dado 2
-dados=data.frame(d1,d2)             #  creación de data.frame 
-suma=apply(dados, 1, sum)           # obtención de la suma de los dos datos
+<pre class="r"><code>n=5000                               # Tamaño de muestra
+d1=sample(1:6,n, replace = TRUE)    # Muestra dado 1
+d2=sample(1:6,n, replace = TRUE)    # Muestra dado 2
+dados=data.frame(d1,d2)             # Creación de data.frame 
+suma=apply(dados, 1, sum)           # Obtención de la suma de los dos datos
 barplot(table(suma), las=1,cex.axis=0.7, ylim = c(0,1000))  # gráfico  de la suma</code></pre>
 <p><img src="recurso601_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p></br></br></p>
@@ -468,10 +468,10 @@ siguiente ejemplo :</p>
 <li>3 representa las bolas azules</li>
 </ul></li>
 </ul>
-<pre class="r"><code>u=sample(c(&quot;azul&quot;,&quot;blanca&quot;,&quot;roja&quot;),  # vector con elementos 
-       size=200,                    # tamaño de la muestra
-       rep=TRUE,                   # con repeticion 
-       prob=c(3,5,4))              # número de bolas por color
+<pre class="r"><code>u=sample(c(&quot;azul&quot;,&quot;blanca&quot;,&quot;roja&quot;),  # Vector con elementos 
+       size=200,                    # Tamaño de la muestra
+       rep=TRUE,                   # Con repeticion 
+       prob=c(3,5,4))              # Número de bolas por color
 barplot(table(u), las=1)</code></pre>
 <p><img src="recurso601_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <p></br></br></p>

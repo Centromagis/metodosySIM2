@@ -211,7 +211,7 @@ $$n= \dfrac{154 \times 200}{154 + 200 -1} =87.2 \approxeq 88$$
 	
 **Caso de una proporción** 
 
-Supongamos ahora que se desea calcular el tamaño de la muestra para realizar una estimación de la proporción de estudiantes que reprueban el curso de fundamentos de programación y que deseamos una confianza del 98\% y un error de muetreo de 0.1. En este caso la varianza corresponde a $pq$ donde $q=1-p$ y por tanto tendrá su valor máximo cuando $p=0.50$, es decir que si utilizamos como varianza $0.5 \times (1-0.5)=0.25$ obtendremos el valor más grande de tamaño de muestra posible.
+Supongamos ahora que se desea calcular el tamaño de la muestra para realizar una estimación de la proporción de estudiantes que reprueban el curso de fundamentos de programación y que deseamos una confianza del 98\% y un error de muestreo de 0.1. En este caso la varianza corresponde a $pq$ donde $q=1-p$ y por tanto tendrá su valor máximo cuando $p=0.50$, es decir que si utilizamos como varianza $0.5 \times (1-0.5)=0.25$ obtendremos el valor más grande de tamaño de muestra posible.
 	
 $$ n=\dfrac{2.33^2 \times 0.25}{0.1^{2}}=135.7 \approxeq 136$$
 	
@@ -299,7 +299,7 @@ A veces, para estudios exploratorios, el muestreo probabilístico resulta excesi
 	
 <br/>
 	
-En el caso de no contar con los supuestos que puedan garantizar la selección de la muestra de una manera aleatoria (no contar con un listado de la población o el no poder identificar con anticipación los elementos que conforman la población) y requerir de información para realizar análisis exploratorios, podemos utilizar otro tipo de muestreos llamados no probabílisticos. A continuación se describen algunos de ellos:
+En el caso de no contar con los supuestos que puedan garantizar la selección de la muestra de una manera aleatoria (no contar con un listado de la población o el no poder identificar con anticipación los elementos que conforman la población) y requerir de información para realizar análisis exploratorios, podemos utilizar otro tipo de muestreos llamados no probabilísticos. A continuación se describen algunos de ellos:
 	
 <br/><br/>
 	
@@ -311,7 +311,7 @@ También denominado en ocasiones **accidental**. Se asienta generalmente sobre l
 	
 ### <span style="color:#034a94">**Muestreo Intencional**</span> 
 	
-Este tipo de muestreo se caracteriza por un esfuerzo deliberado de obtener muestras "representativas mediante la inclusión en la muestra de grupos supuestamente típicos. Es muy frecuente su utilización en sondeos preelectorales de zonas que en anteriores votaciones han marcado tendencias de voto.
+Este tipo de muestreo se caracteriza por un esfuerzo deliberado de obtener muestras "representativas mediante la inclusión en la muestra de grupos supuestamente típicos. Es muy frecuente su utilización en sondeos pre-electorales de zonas que en anteriores votaciones han marcado tendencias de voto.
 	
 <br/><br/>
 	

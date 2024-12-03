@@ -14,7 +14,7 @@
 
 <title> Intervalos de confianza</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -423,15 +423,15 @@ $(document).ready(function () {
 
 
 <p><br/><br/></p>
-<div id="inrtevalo-de-confianza-para-una-media" class="section level2">
-<h2><span style="color:#034a94"><strong>Inrtevalo de confianza para una
+<div id="intervalo-de-confianza-para-una-media" class="section level2">
+<h2><span style="color:#034a94"><strong>Intervalo de confianza para una
 media</strong></span></h2>
 <p>Como ejemplo se estima un intervalo de confianza para la el tiempo de
 carrera de los participantes en la carrera La Luz 2022, para una muestra
 de n=100 competidores</p>
 <pre class="r"><code>x=sample(CarreraLuz22$timerun/60, 100)
 t.test(x,conf.level = 0.95)$conf.int</code></pre>
-<pre><code>[1] 62.48549 67.54151
+<pre><code>[1] 63.26491 69.73875
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p><br/><br/></p>
@@ -459,18 +459,18 @@ class="section level2">
 varianza</strong></span></h2>
 <p>Para calcular el intervalo de confianza para una varianza, he creado
 la siguiente función, dado que no está disponible en R</p>
-<pre class="r"><code># parametros de entrada : x variable 
+<pre class="r"><code># Parámetros de entrada : x variable 
 #                         a alpha (confianza del 95% : a=0.05) 
 
 ic.var=function(x,a){
   n=length(x)
-    per.chi2=qchisq(c(1-a/2, a/2), n-1)   # percentiles chi-cuadrado para 95% de confianza
+    per.chi2=qchisq(c(1-a/2, a/2), n-1)   # Percentiles chi-cuadrado para 95% de confianza
   icvar=(n-1)*var(x)/per.chi2
   return(icvar)
 }
 x1=sample(CarreraLuz22$edad, 200)
 ic.var(x1, 0.05)</code></pre>
-<pre><code>[1]  92.16515 136.66466</code></pre>
+<pre><code>[1]  93.1839 138.1753</code></pre>
 </div>
 <div id="intervalo-de-confianza-para-la-comparación-varianzas"
 class="section level2">
@@ -481,7 +481,7 @@ comparación varianzas</strong></span></h2>
 xF=sample(CarreraLuz22F$timerun/60, 100)
 
 var.test(xM, xF)$conf.int</code></pre>
-<pre><code>[1] 0.4917379 1.0861953
+<pre><code>[1] 0.5400836 1.1929858
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>Como el intervalo contiene el valor de uno, nos indica que la
@@ -502,12 +502,12 @@ de tamaño <span class="math inline">\(n=200\)</span> para cada grupo</p>
 <pre class="r"><code>xM=sample(CarreraLuz22M$timerun/60, 100)
 xF=sample(CarreraLuz22F$timerun/60, 100)
 
-t.test(xM, xF,                            # variables a comparar
-       mu = 0,                            # por defecto se toma el valor de cero  
-       paired = FALSE,                    # los grupos son independientes (no pareados)
-       var.equal = TRUE,                  # las varianzas se asumen iguales 
-       conf.level = 0.95 )$conf.int       # nivel de confianza</code></pre>
-<pre><code>[1] -12.708069  -6.245598
+t.test(xM, xF,                            # Variables a comparar
+       mu = 0,                            # Por defecto se toma el valor de cero  
+       paired = FALSE,                    # Los grupos son independientes (no pareados)
+       var.equal = TRUE,                  # Las varianzas se asumen iguales 
+       conf.level = 0.95 )$conf.int       # Nivel de confianza</code></pre>
+<pre><code>[1] -12.447827  -6.168506
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>El valor <span class="math inline">\((-,-)\)</span> indica que la
@@ -535,7 +535,7 @@ t2=CarreraLuz22M$categoria %&gt;%
 p2=t2[2]/sum(t2)
 
 prop.test(c(p1,p2),c(100,100), conf.level = 0.95)$conf.int</code></pre>
-<pre><code>[1] -0.02490569  0.01670569
+<pre><code>[1] -0.02453141  0.01813141
 attr(,&quot;conf.level&quot;)
 [1] 0.95</code></pre>
 <p>Como el resultado obtenido contiene a cero, lo que indica que las

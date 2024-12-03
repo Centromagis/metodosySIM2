@@ -22,7 +22,7 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 
 <br/><br/>
 
-El siguiete problema tiene como objetivo visualizar las principales propiedades de los estimadores : insesgadez, eficiencia y suficiencia.  Con este propósito se realizará la simulación de una muestra aleatoria proveniente de una distribución unifirme.
+El siguiente problema tiene como objetivo visualizar las principales propiedades de los estimadores : insesgadez, eficiencia y suficiencia.  Con este propósito se realizará la simulación de una muestra aleatoria proveniente de una distribución uniforme.
 
 <br/><br/>
 
@@ -63,18 +63,18 @@ Para ello se realiza una simulación, para posteriormente evaluar los estimadore
 library(ggplot2)
 n=10                                      # n: tamaño de muestra 
 m=1000*n                                  # m tamaño de replicas del experimento 
-Y=matrix(runif(m, min=0, max=20), ncol=n) # matriz de datos m x n 
-Mx=apply(Y,1,mean)                        # cálculo de la media para las m muestra  
-Max=apply(Y,1,max)                        # cálculo del valor máximo para las m muestras  
-T1=2*Mx                                   # cálculo de los m valores para el estimador 1   
-T2=Max                                    # cálculo de los m valores para el estimador 2    
-T3=((n+1)/n)*T2                           # cálculo de los m valores para el estimador 3       
+Y=matrix(runif(m, min=0, max=20), ncol=n) # Matriz de datos m x n 
+Mx=apply(Y,1,mean)                        # Cálculo de la media para las m muestra  
+Max=apply(Y,1,max)                        # Cálculo del valor máximo para las m muestras  
+T1=2*Mx                                   # Cálculo de los m valores para el estimador 1   
+T2=Max                                    # Cálculo de los m valores para el estimador 2    
+T3=((n+1)/n)*T2                           # Cálculo de los m valores para el estimador 3       
 T123=data.frame(T1,T2,T3)                 # data.frame con los tres estimadores data de m x 3
 
-boxplot(T123, las=1, main="Comparación estimadores con n=10")  # gráfico de comparación   
-abline(h=20,  col="red")                                       # línea indicando el parámetro b=20
-apply(T123,2,mean)                                             # valores de las medias
-apply(T123,2,sd)                                             # valores de la desviaciones estándar
+boxplot(T123, las=1, main="Comparación estimadores con n=10")  # Gráfico de comparación   
+abline(h=20,  col="red")                                       # Línea indicando el parámetro b=20
+apply(T123,2,mean)                                             # Valores de las medias
+apply(T123,2,sd)                                             # Valores de la desviaciones estándar
 ```
 
 Para un tamaño de muestra n=10 se observa que los mejores resultados se obtienen con T3. Este estimador se puede clasificar como INSESGADO y EFICIENTE, pues ademas que su promedio está muy cerca de 20, tiene la menor varianza
@@ -103,7 +103,7 @@ apply(T123,2,sd)
 ```
 
 
-Los resutados indican que el mejor estimador de b corresponde a T3. Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de la muestra pasando de n=10 a n=100 se observa que su promedio se acerca mas a 20 que corresponde al valor del parametro 
+Los resultados indican que el mejor estimador de b corresponde a T3. Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de la muestra pasando de n=10 a n=100 se observa que su promedio se acerca mas a 20 que corresponde al valor del parámetro 
 
 
 <br/><br/><br/>
@@ -111,7 +111,7 @@ Los resutados indican que el mejor estimador de b corresponde a T3. Sin embargo 
 
 # <span style="color:#034a94">**Teorema del Límite Central**</span>
 
-El **Teorema del Límite Central** (TLC) es un concepto fundamental en la teoría de probabilidad y estadísticas. Describe el comportamiento de las **sumas** o **promedios** de un gran número de variables aleatorias independientes e idénticamente distribuidas (IID) cuando el número de variables aumenta. En otras palabras, el teorema establece que, bajo ciertas condiciones, la distribución de la suma o el promedio de muchas variables aleatorias tiende a aproximarse a una distribución normal, independientemente de la distribución original de las variables.
+El **Teorema del Límite Central** (TLC) es un concepto fundamental en la teoría de probabilidad y estadística. Describe el comportamiento de las **sumas** o **promedios** de un gran número de variables aleatorias independientes e idénticamente distribuidas (IID) cuando el número de variables aumenta. En otras palabras, el teorema establece que, bajo ciertas condiciones, la distribución de la suma o el promedio de muchas variables aleatorias tiende a aproximarse a una distribución normal, independientemente de la distribución original de las variables.
 
 <br/>
 
@@ -142,13 +142,13 @@ Con este fin se siguen los siguientes pasos:
 par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(3,2), mai = c(.5, .5, .5, .5))
 # Teorema Central del Límite-----------------------------
 # Paso 1
-n=1000   #  numero de columnas (tamaño máximo de muestra)
+n=1000   #  Numero de columnas (tamaño máximo de muestra)
 m=1000*n
 # Caso --------------------------------------------------
-# distribución exponencial-------------------------------
+# Distribución exponencial-------------------------------
 X=matrix(rexp(m,1),ncol=n) #############################
 # Paso 2
-# generación de muestras--------------------------------
+# Generación de muestras--------------------------------
 X1=X[ ,1]            # n=1
 X2=X[ ,1:2]          # n=2
 X20=X[ ,1:20]        # n=20
@@ -157,7 +157,7 @@ X50=X[ ,1:50]        # n=50
 X100=X[ ,1:100]      # n=100
 X1000=X[ ,1:1000]    # n=1000
 # Paso 3
-# generacion de medias-------------------------------------------
+# Generación de medias-------------------------------------------
 Mx2=apply(X2,1,mean)        # medias de muestras de tamaño n=2
 Mx20=apply(X20,1,mean)      # medias de muestras de tamaño n=20
 Mx30=apply(X30,1,mean)      # medias de muestras de tamaño n=30
@@ -165,7 +165,7 @@ Mx50=apply(X50,1,mean)      # medias de muestras de tamaño n=50
 Mx100=apply(X100,1,mean)    # medias de muestras de tamaño n=100
 Mx1000=apply(X1000,1,mean)  # medias de muestras de tamaño n=1000
 # Paso 4 
-# generación de densidad empírica -------------------------------
+# Generación de densidad empírica -------------------------------
 d=density(X1)
 d2=density(Mx2)
 #d20=density(Mx20)
@@ -174,9 +174,9 @@ d50=density(Mx50)
 d100=density(Mx100)
 d1000=density(Mx1000)
 # Gráficos de densidad -------------------------------------------
-# configuración de las gráficas
+# Configuración de las gráficas
 par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(2,3), mai = c(.5, .5, .5, .5))
-# histogramas  de comparacion-------------------------------------
+# Histogramas  de comparación-------------------------------------
 plot(d, main=" ", xlab = "n=1")
 plot(d2,main=" ", xlab = "n=2")
 #plot(d20, main="", xlab = "n=20")
@@ -184,7 +184,7 @@ plot(d30, main=" ", xlab = "n=30")
 plot(d50, main=" ", xlab = "n=50")
 plot(d100, main=" ", xlab = "n=100")
 plot(d1000,main=" ", xlab="n=1000")
-# histogramas  de comparacion-------------------------------------
+# Histogramas  de comparación-------------------------------------
 hist(X1,  main = "n=1", freq=FALSE)
 hist(Mx2, main ="n=2", freq=FALSE) 
 # hist(Mx20, main = "n=20",freq=FALSE)
@@ -192,7 +192,7 @@ hist(Mx30, main = "n=30",freq=FALSE)
 hist(Mx50, main = "n=50",freq=FALSE) 
 hist(Mx100, main = "n=100", freq=FALSE) 
 hist(Mx1000, main = "n=1000", freq = FALSE) 
-# histogramas  de comparacion--------------------------
+# Histogramas  de comparación--------------------------
 qqnorm(X1) ; qqline(X1, col="red")
 qqnorm(Mx2) ; qqline(Mx2, col="red")
 # qqnorm(Mx20) ; qqline(Mx20, col="red")

@@ -14,7 +14,7 @@
 
 <title> Modelos discretos</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -531,7 +531,7 @@ de distribución de probabilidad $</p>
 <p>El modelo <strong>binomial</strong>, que puede verse como una
 generalización del modelo Bernoulli, pasando de un ensayo a <span
 class="math inline">\(n\)</span> ensayos. Fue investigada y analizada
-por el físico y matemático suizo Jakob Bernoulli en relación con
+por el físico y matemático suizo Jacob Bernoulli en relación con
 problemas presentados en los juegos de azar. Su trabajo fue presentado
 en 1713.</p>
 <p><br/></p>
@@ -560,7 +560,7 @@ ensayos</strong>.</p></li>
 <li><p>Se puede decir que la suma de <span
 class="math inline">\(n\)</span> variables independientes con
 distribución Bernoulli(<span class="math inline">\(p\)</span>), se
-distribuye de manera Bionomial(<span
+distribuye de manera Binomial(<span
 class="math inline">\(n,p\)</span>)</p></li>
 </ul>
 <p>La función de distribución de probabilidad está dada por:</p>
@@ -588,11 +588,11 @@ class="math inline">\(X \sim binom(x,n=10,p=0.30)\)</span>
 <h2><span style="color:#034a94"><strong>Poisson</strong></span></h2>
 <p><br/></p>
 <p>El modelo <strong>Poisson</strong> fue plantea por el físico y
-matemático francés Siméon-Denis Poissonen uno de sus trabajos presentado
-en 1838 relacionado con temas sobre juicios en temas criminales y
-civiles. Es utilizado para resolver problemas asociados con el número de
-eventos que ocurren en un intervalo de tiempo o espacio, como por
-ejemplo:</p>
+matemático francés Siméon-Denis Poisson en uno de sus trabajos
+presentado en 1838 relacionado con temas sobre juicios en temas
+criminales y civiles. Es utilizado para resolver problemas asociados con
+el número de eventos que ocurren en un intervalo de tiempo o espacio,
+como por ejemplo:</p>
 <ul>
 <li><p>número de llamadas que recibe un conmutador durante una
 hora</p></li>
@@ -603,15 +603,20 @@ class="math inline">\(mm^{3}\)</span> de sangre</p></li>
 class="math inline">\(m^{2}\)</span> de carretera</p></li>
 </ul>
 <p><br/></p>
-<div id="distribución-pisson" class="section level3 content-box-blue">
+<div id="distribución-poisson" class="section level3 content-box-blue">
 <h3><span style="color:#034a94"><strong>Distribución
-Pisson</strong></span></h3>
+Poisson</strong></span></h3>
 <p>La función de distribución de probabilidad de una variable con
 distribución Poisson esta dada por siguiente la expresión:</p>
-<p><span
-class="math inline">\(\begin{equation*}  f(x)=\left\lbrace  \begin{array}{lll}  \dfrac{\lambda^{x}}{x!}
-\hspace{.2cm} e^{-\lambda} &amp;,&amp; x \geq 0 \\  &amp;&amp;\\  0
-&amp;,&amp; \mbox{en otro caso}  \end{array}  \right.
+<p><span class="math inline">\(\begin{equation*}
+    f(x)=\left\lbrace
+    \begin{array}{lll}
+        \dfrac{\lambda^{x}}{x!} \hspace{.2cm} e^{-\lambda} &amp;,&amp; x
+\geq 0   \\
+        &amp;&amp;\\
+        0 &amp;,&amp; \mbox{en otro caso}
+    \end{array}
+    \right.
 \end{equation*}\)</span></p>
 <p>Donde <span class="math inline">\(\lambda\)</span> es la cantidad
 promedio de ocurrencias en el periodo de interés.</p>
@@ -630,17 +635,17 @@ class="math inline">\(X \sim poiss(x,\lambda=2)\)</span>
 </center>
 <p><br/><br/></p>
 </div>
-<div id="hipergeometrico" class="section level2">
+<div id="hipergeométrico" class="section level2">
 <h2><span
-style="color:#034a94"><strong>hipergeometrico</strong></span></h2>
+style="color:#034a94"><strong>hipergeométrico</strong></span></h2>
 <p>Este modelo <strong>hipergeométrico</strong> nace de la necesidad de
 modelar eventos Bernoulli con probabilidad no constante generados en
 elecciones sin repetición.</p>
 <p><br/></p>
-<div id="distribución-hipergeometrica"
+<div id="distribución-hipergeométrica"
 class="section level3 content-box-blue">
 <h3><span style="color:#034a94"><strong>Distribución
-hipergeometrica</strong></span></h3>
+hipergeométrica</strong></span></h3>
 <p>Se tiene un conjunto de <span class="math inline">\(N\)</span>
 objetos que contiene <span class="math inline">\(K\)</span> objetos
 clasificados como éxitos y <span class="math inline">\(N-K\)</span>
@@ -670,17 +675,17 @@ class="math display">\[V[X]=n\Bigg(\frac{K}{N}\Bigg)
 <center>
 <img src="recurso204_files/figure-html/unnamed-chunk-3-1.png" width="672" />
 <br/> <strong>Figura 2.20</strong> Función de distribución
-hipergeometrica <span class="math inline">\(X \sim hyperg(x, m=95, n=5,
+hipergeométrica <span class="math inline">\(X \sim hyperg(x, m=95, n=5,
 k=10)\)</span>
 </center>
 <p><br/><br/></p>
 </div>
-<div id="geométrico-o-de-pascal" class="section level2">
-<h2><span style="color:#034a94"><strong>geométrico o de
+<div id="geométrica-o-de-pascal" class="section level2">
+<h2><span style="color:#034a94"><strong>geométrica o de
 Pascal</strong></span></h2>
 <p>La distribución <strong>geométrica</strong> también conocida como
 distribución de Pascal, fue esbozada en el escrito El arte de la
-conjetura, escrita por Jakob Bernoulli. Esta distribución modela el
+conjetura, escrita por Jacob Bernoulli. Esta distribución modela el
 número de ensayos Bernoulli necesarios para obtener el primer éxito. Los
 valores que puede tomar esta variable son:</p>
 <p><br/></p>
@@ -765,9 +770,9 @@ de Pascal - <span class="math inline">\(X \sim geom(x,p=0.5)\)</span>
 </center>
 <p><br/><br/></p>
 </div>
-<div id="binomial-negativo" class="section level2">
+<div id="binomial-negativa" class="section level2">
 <h2><span style="color:#034a94"><strong>binomial
-negativo</strong></span></h2>
+negativa</strong></span></h2>
 <p><br/></p>
 <p>La distribución <strong>binomial negativa</strong> esta relacionada
 con la distribución geométrica</p>

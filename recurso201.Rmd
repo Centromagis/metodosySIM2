@@ -41,7 +41,7 @@ Este  concepto está relacionado a diferentes contextos donde se requiere dar re
 
 En  todos los casos se trata de  preguntas que tienen  diferentes  respuestas, o  que no tienen un único valor como  respuesta.  En este documento  se estudiará el concepto de variable aleatoria y mediante la definición  de una función  matemática que nos  permita caracterizar su  comportamiento, realizaremos diferentes cálculos de probabilidades de interés. Para ello será necesario  retomar conocimientos de cálculo integral que serán  expuestos en su momento mediante funciones de fácil manejo.
 
-En esta unidad se tratará el  caso univariado discreto, luego el caso continuo,con sus principales características, conceptos relacionados con los vistos en el modulo anterior.
+En esta unidad se tratará el  caso univariado discreto, luego el caso continuo, con sus principales características, conceptos relacionados con los vistos en el modulo anterior.
 
 <br/><br/>
 
@@ -113,10 +113,9 @@ $$f_{_{X}}(2) = P(X=2)=\frac{3}{8}\hspace{.2cm} ,\hspace{.5cm} f_{_{X}}(3) =P(X=
 
 # <span style="color:#034a94">**Variables discretas**</span> 
 
-Como se mencionó anteriormente una variable aleatoria se considera como **DISCRETA** cuando el conjunto de posibles valores que puede tomar la variables es un conjunto finito o infinito numerable. En la gran mayor
-ia de los casos este conjunto corresponde a los números enteros.
+Como se mencionó anteriormente una variable aleatoria se considera como **DISCRETA** cuando el conjunto de posibles valores que puede tomar la variables es un conjunto finito o infinito numerable. En la gran mayoría de los casos este conjunto corresponde a los números enteros.
 
-Para catacterizar la variable se define  la función de distribución de probabilidad que modela la asignación de las probabilidades
+Para caracterizar la variable se define  la función de distribución de probabilidad que modela la asignación de las probabilidades
 
 
 <br/><br/>
@@ -194,7 +193,7 @@ $$f_{_{X}}(x) = \left \{
 
 ```{r, echo=FALSE, fig.height=3.5}
 library(ggplot2)
-# modelo binomial  ok
+# Modelo binomial  ok
 dat<-data.frame(x<-0:20,
                 fx<-dbinom(x,20,0.70))
 
@@ -247,7 +246,7 @@ $P(X > 15) = 1 - P(X \leq 14) = 0.4164$
 
 Como se mencionó se considera una variable como continua cuando el conjunto de valores que puede tomar es un conjunto infinito no numerable, es decir que siempre podrá haber un valor entre dos valores de ella.
 
-Para este caso la probabilidad se puede modelar a través de una función continua, la cual se puede visualizar al construir un gráfico de densidad a partir de una muestra de ellos. A esta función se le llama función de densidad de probabilidad
+Para este caso la probabilidad se puede modelar a través de una función continua, la cual se puede visualizar al construir un gráfico de densidad a partir de una muestra de ellos. A esta función se le llama función de densidad de probabilidad.
 
 
 

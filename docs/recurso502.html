@@ -14,7 +14,7 @@
 
 <title> Pruebas de hipótesis para una población</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -462,8 +462,8 @@ paramétrico:</p>
 <tr class="even">
 <td align="center"><span class="math inline">\(H_a : \mu \neq
 \mu_{o}\)</span></td>
-<td align="center"><span class="math inline">\(H_a : \mu &lt;
-\mu_{o}\)</span></td>
+<td align="center"><span class="math inline">\(H_a : \mu
+&lt;  \mu_{o}\)</span></td>
 <td align="center"><span class="math inline">\(H_a : \mu &gt;
 \mu_{o}\)</span></td>
 </tr>
@@ -511,7 +511,7 @@ si su distribución es normal con el fin de determinar que prueba
 utilizar. Cumplido este supuesto y al no tener conocimiento del valor de
 la varianza utilizaremos una <strong>prueba t</strong> para una
 media</p>
-<pre class="r"><code># x=sample(CarreraLuz22_c2$edad, 50)  # muestra de tamaño n=50
+<pre class="r"><code># x=sample(CarreraLuz22_c2$edad, 50)  # Muestra de tamaño n=50
 x=c(37, 36, 36, 27, 21, 24, 31, 29, 29, 29, 31, 26, 34, 39, 33, 27, 30, 29, 28, 34, 39, 36, 34, 27, 38, 32, 27, 27, 32, 38, 27, 31, 38, 36, 33, 18, 25, 26, 33, 34, 35, 35, 33, 34, 30, 39, 27, 35, 31, 36)
 shapiro.test(x)  # prueba de normalidad</code></pre>
 <pre><code>
@@ -591,8 +591,8 @@ años.</p>
 <p>Si <span class="math inline">\(\alpha &gt; \text{valor-p}\)</span>
 entonces rechazamos <span class="math inline">\(H_{o}\)</span>, se
 <strong>acepta</strong> <span class="math inline">\(H_{a}\)</span> como
-verdadera. Si por el contrario <span class="math inline">\(\alpha &lt;
-\text{valor-p}\)</span>, no rechazamos <span
+verdadera. Si por el contrario <span class="math inline">\(\alpha
+&lt;  \text{valor-p}\)</span>, no rechazamos <span
 class="math inline">\(H_{o}\)</span>, <strong>asumimos</strong> que
 <span class="math inline">\(H_{o}\)</span> es verdad.</p>
 </div>
@@ -679,7 +679,7 @@ aprueban el curso. Durante el último proceso, los encargados efectúan
 cambios al programa de entrenamiento, con el fin de realizar una
 selección más exigente. Para esta versión se inscriben 40 aspirantes de
 los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios
-realizados en el programa de entrenamiento reducen la selección? |</p>
+realizados en el programa de entrenamiento reducen la selección?</p>
 <p>Debemos realizar una prueba de cola inferior debido al sentido que
 tienen la afirmación que queremos verificar <em>los cambios realizados
 en el programa de entrenamiento reducen la selección</em>.</p>
@@ -808,7 +808,7 @@ prueba</strong></span></h3>
 <tr class="even">
 <td align="center">(5)</td>
 <td align="left"></td>
-<td align="left"><span class="math inline">\(Z_{o} = \dfrac{X-n
+<td align="left"><span class="math inline">\(Z_{o} =  \dfrac{X-n
 \hspace{.1cm} p_{o}}{\sqrt{n \hspace{.1cm }p_{o}}} \sim
 N(0,1)\)</span></td>
 </tr>

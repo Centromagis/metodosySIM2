@@ -14,7 +14,7 @@
 
 <title> Estimación</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -427,10 +427,10 @@ $(document).ready(function () {
 <h1><span style="color:#034a94"><strong>Propiedad de los
 estimadores</strong></span></h1>
 <p><br/><br/></p>
-<p>El siguiete problema tiene como objetivo visualizar las principales
+<p>El siguiente problema tiene como objetivo visualizar las principales
 propiedades de los estimadores : insesgadez, eficiencia y suficiencia.
 Con este propósito se realizará la simulación de una muestra aleatoria
-proveniente de una distribución unifirme.</p>
+proveniente de una distribución uniforme.</p>
 <p><br/><br/></p>
 <p><strong>Problema :</strong></p>
 <p>Para una variable con distribución uniforme <span
@@ -461,23 +461,23 @@ estimadores propuestos y determinar sus propiedades.</p>
 <pre class="r"><code>library(ggplot2)
 n=10                                      # n: tamaño de muestra 
 m=1000*n                                  # m tamaño de replicas del experimento 
-Y=matrix(runif(m, min=0, max=20), ncol=n) # matriz de datos m x n 
-Mx=apply(Y,1,mean)                        # cálculo de la media para las m muestra  
-Max=apply(Y,1,max)                        # cálculo del valor máximo para las m muestras  
-T1=2*Mx                                   # cálculo de los m valores para el estimador 1   
-T2=Max                                    # cálculo de los m valores para el estimador 2    
-T3=((n+1)/n)*T2                           # cálculo de los m valores para el estimador 3       
+Y=matrix(runif(m, min=0, max=20), ncol=n) # Matriz de datos m x n 
+Mx=apply(Y,1,mean)                        # Cálculo de la media para las m muestra  
+Max=apply(Y,1,max)                        # Cálculo del valor máximo para las m muestras  
+T1=2*Mx                                   # Cálculo de los m valores para el estimador 1   
+T2=Max                                    # Cálculo de los m valores para el estimador 2    
+T3=((n+1)/n)*T2                           # Cálculo de los m valores para el estimador 3       
 T123=data.frame(T1,T2,T3)                 # data.frame con los tres estimadores data de m x 3
 
-boxplot(T123, las=1, main=&quot;Comparación estimadores con n=10&quot;)  # gráfico de comparación   
-abline(h=20,  col=&quot;red&quot;)                                       # línea indicando el parámetro b=20</code></pre>
+boxplot(T123, las=1, main=&quot;Comparación estimadores con n=10&quot;)  # Gráfico de comparación   
+abline(h=20,  col=&quot;red&quot;)                                       # Línea indicando el parámetro b=20</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<pre class="r"><code>apply(T123,2,mean)                                             # valores de las medias</code></pre>
+<pre class="r"><code>apply(T123,2,mean)                                             # Valores de las medias</code></pre>
 <pre><code>      T1       T2       T3 
-19.95601 18.23282 20.05611 </code></pre>
-<pre class="r"><code>apply(T123,2,sd)                                             # valores de la desviaciones estándar</code></pre>
+20.15104 18.13786 19.95164 </code></pre>
+<pre class="r"><code>apply(T123,2,sd)                                             # Valores de la desviaciones estándar</code></pre>
 <pre><code>      T1       T2       T3 
-3.657942 1.614489 1.775938 </code></pre>
+3.581697 1.692030 1.861233 </code></pre>
 <p>Para un tamaño de muestra n=10 se observa que los mejores resultados
 se obtienen con T3. Este estimador se puede clasificar como INSESGADO y
 EFICIENTE, pues ademas que su promedio está muy cerca de 20, tiene la
@@ -497,21 +497,21 @@ abline(h=20,  col=&quot;red&quot;)</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 <pre class="r"><code>apply(T123,2,mean)</code></pre>
 <pre><code>      T1       T2       T3 
-19.96710 19.79632 19.99428 </code></pre>
+19.94354 19.79453 19.99248 </code></pre>
 <pre class="r"><code>apply(T123,2,sd)  </code></pre>
 <pre><code>       T1        T2        T3 
-1.2125901 0.1952075 0.1971596 </code></pre>
-<p>Los resutados indican que el mejor estimador de b corresponde a T3.
+1.1829769 0.2137587 0.2158963 </code></pre>
+<p>Los resultados indican que el mejor estimador de b corresponde a T3.
 Sin embargo el estimador T2 que era insesgado al aumentar el tamaño de
 la muestra pasando de n=10 a n=100 se observa que su promedio se acerca
-mas a 20 que corresponde al valor del parametro</p>
+mas a 20 que corresponde al valor del parámetro</p>
 <p><br/><br/><br/></p>
 </div>
 <div id="teorema-del-límite-central" class="section level1">
 <h1><span style="color:#034a94"><strong>Teorema del Límite
 Central</strong></span></h1>
 <p>El <strong>Teorema del Límite Central</strong> (TLC) es un concepto
-fundamental en la teoría de probabilidad y estadísticas. Describe el
+fundamental en la teoría de probabilidad y estadística. Describe el
 comportamiento de las <strong>sumas</strong> o
 <strong>promedios</strong> de un gran número de variables aleatorias
 independientes e idénticamente distribuidas (IID) cuando el número de
@@ -566,13 +566,13 @@ normalidad con el fin de validar el resultado</li>
 <pre class="r"><code>par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(3,2), mai = c(.5, .5, .5, .5))
 # Teorema Central del Límite-----------------------------
 # Paso 1
-n=1000   #  numero de columnas (tamaño máximo de muestra)
+n=1000   #  Numero de columnas (tamaño máximo de muestra)
 m=1000*n
 # Caso --------------------------------------------------
-# distribución exponencial-------------------------------
+# Distribución exponencial-------------------------------
 X=matrix(rexp(m,1),ncol=n) #############################
 # Paso 2
-# generación de muestras--------------------------------
+# Generación de muestras--------------------------------
 X1=X[ ,1]            # n=1
 X2=X[ ,1:2]          # n=2
 X20=X[ ,1:20]        # n=20
@@ -581,7 +581,7 @@ X50=X[ ,1:50]        # n=50
 X100=X[ ,1:100]      # n=100
 X1000=X[ ,1:1000]    # n=1000
 # Paso 3
-# generacion de medias-------------------------------------------
+# Generación de medias-------------------------------------------
 Mx2=apply(X2,1,mean)        # medias de muestras de tamaño n=2
 Mx20=apply(X20,1,mean)      # medias de muestras de tamaño n=20
 Mx30=apply(X30,1,mean)      # medias de muestras de tamaño n=30
@@ -589,7 +589,7 @@ Mx50=apply(X50,1,mean)      # medias de muestras de tamaño n=50
 Mx100=apply(X100,1,mean)    # medias de muestras de tamaño n=100
 Mx1000=apply(X1000,1,mean)  # medias de muestras de tamaño n=1000
 # Paso 4 
-# generación de densidad empírica -------------------------------
+# Generación de densidad empírica -------------------------------
 d=density(X1)
 d2=density(Mx2)
 #d20=density(Mx20)
@@ -598,9 +598,9 @@ d50=density(Mx50)
 d100=density(Mx100)
 d1000=density(Mx1000)
 # Gráficos de densidad -------------------------------------------
-# configuración de las gráficas
+# Configuración de las gráficas
 par(cex=0.5, cex.axis=.5, cex.lab=.5, cex.main=.5, cex.sub=.5,  mfrow=c(2,3), mai = c(.5, .5, .5, .5))
-# histogramas  de comparacion-------------------------------------
+# Histogramas  de comparación-------------------------------------
 plot(d, main=&quot; &quot;, xlab = &quot;n=1&quot;)
 plot(d2,main=&quot; &quot;, xlab = &quot;n=2&quot;)
 #plot(d20, main=&quot;&quot;, xlab = &quot;n=20&quot;)
@@ -609,7 +609,7 @@ plot(d50, main=&quot; &quot;, xlab = &quot;n=50&quot;)
 plot(d100, main=&quot; &quot;, xlab = &quot;n=100&quot;)
 plot(d1000,main=&quot; &quot;, xlab=&quot;n=1000&quot;)</code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion-------------------------------------
+<pre class="r"><code># Histogramas  de comparación-------------------------------------
 hist(X1,  main = &quot;n=1&quot;, freq=FALSE)
 hist(Mx2, main =&quot;n=2&quot;, freq=FALSE) 
 # hist(Mx20, main = &quot;n=20&quot;,freq=FALSE)
@@ -618,7 +618,7 @@ hist(Mx50, main = &quot;n=50&quot;,freq=FALSE)
 hist(Mx100, main = &quot;n=100&quot;, freq=FALSE) 
 hist(Mx1000, main = &quot;n=1000&quot;, freq = FALSE) </code></pre>
 <p><img src="recurso603_files/figure-html/unnamed-chunk-4-2.png" width="672" /></p>
-<pre class="r"><code># histogramas  de comparacion--------------------------
+<pre class="r"><code># Histogramas  de comparación--------------------------
 qqnorm(X1) ; qqline(X1, col=&quot;red&quot;)
 qqnorm(Mx2) ; qqline(Mx2, col=&quot;red&quot;)
 # qqnorm(Mx20) ; qqline(Mx20, col=&quot;red&quot;)

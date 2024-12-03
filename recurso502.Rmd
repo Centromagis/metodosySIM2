@@ -75,7 +75,7 @@ Para una muestra de $n=50$ de la edad de los participantes de la Carrera La Luz 
 
 
 ```{r}
-# x=sample(CarreraLuz22_c2$edad, 50)  # muestra de tamaño n=50
+# x=sample(CarreraLuz22_c2$edad, 50)  # Muestra de tamaño n=50
 x=c(37, 36, 36, 27, 21, 24, 31, 29, 29, 29, 31, 26, 34, 39, 33, 27, 30, 29, 28, 34, 39, 36, 34, 27, 38, 32, 27, 27, 32, 38, 27, 31, 38, 36, 33, 18, 25, 26, 33, 34, 35, 35, 33, 34, 30, 39, 27, 35, 31, 36)
 shapiro.test(x)  # prueba de normalidad
 
@@ -200,7 +200,7 @@ En este caso debemos tener en cuenta que la muestra sea mayor a 30 con el fin de
 
 ### <span style="color:#FF7F00">**Ejemplo**</span>
 
-Una empresa al seleccionar su personal, lo somete a un curso de entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes aprueban el curso. Durante el último proceso, los encargados efectúan cambios al programa de entrenamiento, con el fin de realizar una selección más exigente. Para esta versión se inscriben 40 aspirantes de los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios realizados en el programa de entrenamiento reducen la selección? |
+Una empresa al seleccionar su personal, lo somete a un curso de entrenamiento. Por su experiencia se conoce que el 76% de los aspirantes aprueban el curso. Durante el último proceso, los encargados efectúan cambios al programa de entrenamiento, con el fin de realizar una selección más exigente. Para esta versión se inscriben 40 aspirantes de los cuales lo aprueban el proceso 24. ¿Podría afirmarse que los cambios realizados en el programa de entrenamiento reducen la selección?
 
 Debemos realizar una prueba de cola inferior debido al sentido que tienen la afirmación que queremos verificar *los cambios realizados en el programa de entrenamiento reducen la selección*. 
 

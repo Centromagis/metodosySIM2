@@ -14,7 +14,7 @@
 
 <title>Estimación por intervalos de confianza</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -529,7 +529,7 @@ class="math inline">\(IC_{\mu; 1-\alpha=0.95}\)</span></p>
 <div id="grados-de-libertad" class="section level2">
 <h2><span style="color:#034a94"><strong>Grados de
 libertad</strong></span></h2>
-<p>Una definicion de grados de libertad encontrada: <a
+<p>Una definición de grados de libertad encontrada: <a
 href="https://psicologiaexperimental.files.wordpress.com/2010/04/grados-de-libertad.pdf">¿Qué
 son los llamados “grados de libertad”?</a> escrito por : Roberto Behar y
 Pere Grima, los define como el número de dimensiones en los que se puede
@@ -754,15 +754,15 @@ la varianza <span class="math inline">\(s^{2}\)</span>,</li>
 variable se puede estimar la desviación estándar <span
 class="math inline">\(s=\frac{\max\{x\}-\min\{x\}}{4}\)</span></li>
 </ol>
-<pre class="r"><code># varianza
+<pre class="r"><code># Varianza
 # s2.nota=var(sample(Colombia$edad, 100))
 s2.nota = 352.2395
 # confianza : 1-a
 a = 1 - 0.98
-# error de nuestre
+# Error de muestreo
 e = 3 # personas 
 
-# tamaño de muestra utilizando función sizemu de paqueteMET
+# Tamaño de muestra utilizando función sizemu de paqueteMET
 # n=paqueteMETODOS::sizemu(qnorm(1-a/2),s2.nota,e)
 # round(n,0)  # redondeo a entero</code></pre>
 <p><br/><br/></p>
@@ -831,7 +831,7 @@ través de una prueba piloto, la varianza máxima que ocurre cuando <span
 class="math inline">\(p=0.5\)</span> (<span
 class="math inline">\(pq=0.25\)</span>)</p></li>
 <li><p><span class="math inline">\(e\)</span> : el error de muestreo que
-representa la tolerancia al erro que tiene el investigador (<span
+representa la tolerancia al error que tiene el investigador (<span
 class="math inline">\(|\widehat{p}-p|&lt;e\)</span>).</p></li>
 </ul>
 </div>
@@ -848,7 +848,7 @@ justifica su costo así: Por costos administrativos y de logística
 corresponde un valor de $ 55.4 millones y cada encuesta realizada tiene
 un valor de $50 mil pesos. El Director de la empresa le encarga a usted
 revisar la información darle un concepto sobre la propuesta realizada
-por la firma de auditores a la mayor brevedad</p>
+por la firma de auditores a la mayor brevedad.</p>
 <p><br/><br/></p>
 </div>
 <div id="solución-3" class="section level3">
@@ -865,7 +865,7 @@ por la firma de auditores a la mayor brevedad</p>
 </ul>
 <pre class="r"><code># library(paqueteMETODOS)
 #paqueteMETODOS::sizep(qnorm(0.995),0.5,0.05)</code></pre>
-<p>De acuerdo con la información sumunistrada por la empresa, el tamaño
+<p>De acuerdo con la información suministrada por la empresa, el tamaño
 de muestra apropiado para la estimación de la proporción, suponiendo
 varianza máxima es de <span class="math inline">\(n=664\)</span>, por
 tal razón la propuesta realiza por la empresa consultora excede en 432
@@ -906,7 +906,7 @@ con <span class="math inline">\((n-a)\)</span> grados de libertad</p>
 <p><br/><br/><br/></p>
 <p><span style="color:#FF7F00"> <strong>Ejemplo</strong></span></p>
 <p>Se quiere estimar un intervalo de confianza del 95% para la
-desviación estandar de los precios de los últimos 22 dias (sep.10.2021 a
+desviación estándar de los precios de los últimos 22 días (sep.10.2021 a
 oct.7.2021, tomados de :Investing.com)</p>
 <p><br/><br/></p>
 <pre class="r"><code># install.packages(&quot;paqueteMETODOS&quot;)

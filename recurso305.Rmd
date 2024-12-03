@@ -54,7 +54,7 @@ El potencial de este teorema esta en que no importa la distribución de la varia
 
 <br/>
 
-Supongamos que se tiene población exponecial con parámetro $\lambda = 1$  con función de densidad de probabilidad dada por :
+Supongamos que se tiene población exponencial con parámetro $\lambda = 1$  con función de densidad de probabilidad dada por:
 
 $$\begin{equation*}
 	f(x)=\left\lbrace

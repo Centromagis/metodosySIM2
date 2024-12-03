@@ -14,7 +14,7 @@
 
 <title> Modelos de probabilidad</title>
 
-<script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
@@ -34,8 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -437,11 +437,11 @@ principales modelos:</p>
 discretos</strong>:</span></h4>
 <ul>
 <li>Bernoulli,</li>
-<li>binomial,</li>
+<li>Binomial,</li>
 <li>Poisson,</li>
-<li>geometrico,</li>
-<li>hipergeometrico,</li>
-<li>binomial negativo.</li>
+<li>Geométrico,</li>
+<li>Hipergeométrico,</li>
+<li>Binomial negativo.</li>
 </ul>
 <p><br/><br/></p>
 </div>
@@ -449,19 +449,19 @@ discretos</strong>:</span></h4>
 <h4><span style="color:#034a94"><strong>Modelos
 continuos</strong>:</span></h4>
 <ul>
-<li>uniforme</li>
-<li>normal</li>
-<li>exponencial</li>
-<li>lognormal</li>
-<li>gamma</li>
-<li>beta</li>
+<li>Uniforme</li>
+<li>Normal</li>
+<li>Exponencial</li>
+<li>Lognormal</li>
+<li>Gamma</li>
+<li>Beta</li>
 <li>Weibull</li>
 <li>Cauchy</li>
 <li>Gumbel</li>
 <li>t-Student</li>
 <li>Ji-cuadrado</li>
 <li>F de Fisher</li>
-<li>Empirica o Kernel</li>
+<li>Empírica o Kernel</li>
 </ul>
 <p><br/><br/></p>
 <p>En <span class="math inline">\(R\)</span> los nombre de las funciones
@@ -673,17 +673,17 @@ class="math inline">\(f(x)\)</span> y <span
 class="math inline">\(F(x)\)</span> para todo el rango de la
 variable</li>
 </ol>
-<pre class="r"><code>x=0:20                     # genera secuencia 0 al 20
-fx=dbinom(x, 20, 0.30)     # evalua f(x)
-fx=round(fx,4)             # redondea a 4 decimales
-Fx=pbinom(x, 20, 0.30)     # evalua en F(x)
-Fx=round(Fx,4)             # redondea a 4 decimales</code></pre>
+<pre class="r"><code>x=0:20                     # Genera secuencia 0 al 20
+fx=dbinom(x, 20, 0.30)     # Evalúa f(x)
+fx=round(fx,4)             # Redondea a 4 decimales
+Fx=pbinom(x, 20, 0.30)     # Evalúa en F(x)
+Fx=round(Fx,4)             # Redondea a 4 decimales</code></pre>
 <p><br/></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Generar 15 números aleatorios a partir de esta distribución</li>
 </ol>
 <pre class="r"><code>rbinom(15,20,0.30)</code></pre>
-<pre><code> [1] 5 6 8 7 5 7 7 9 5 5 7 3 2 8 6</code></pre>
+<pre><code> [1]  5  4  8  4 11 10  8  3  3  6  5  6  7  6  8</code></pre>
 <p><br/></p>
 <ol start="5" style="list-style-type: decimal">
 <li>Construir la gráfica de la función de distribución de probabilidad
@@ -753,8 +753,8 @@ class="math inline">\(P(X&gt;70)\)</span></li>
 class="math inline">\(X\)</span></li>
 </ol>
 <pre class="r"><code>rnorm(10,70,sqrt(100))</code></pre>
-<pre><code> [1] 84.06935 72.73373 67.39780 74.17956 63.13329 67.88802 61.51888 75.09296
- [9] 55.31986 72.95668</code></pre>
+<pre><code> [1] 83.67775 84.02647 60.47795 77.05252 72.27748 69.18931 65.30155 62.88236
+ [9] 62.73094 79.51441</code></pre>
 <p><br/></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Generar la gráfica de la función de densidad de la variable <span
@@ -824,38 +824,38 @@ independientes. El área de una placa esta dada por <span
 class="math inline">\(A=XY\)</span>.</p>
 <p><img src="img/lamina.png" width="30%" style="display: block; margin: auto;" /></p>
 <p><strong>Solución</strong></p>
-<pre class="r"><code>    X2=rnorm(1000,mean=2.0,sd=0.1)    #  generación de números aleatorios  de X
-    Y2=rnorm(1000,mean=3.0,sd=0.2)    #  generación de números aleatorios  de Y
-    Z2=data.frame(X2,Y2)              #  generación de matriz de X,Y
-    A2=apply(Z2,1,prod)               #  área de la placa A=XY
-    mediaA=mean(A2)                   #  media del vector de áreas 
-    varianzaA=var(A2)                 #  varianza del vector de áreas 
-    B2=as.numeric(A2&gt;5.9 &amp; A2&lt;6.1)    #  generación de variable de 0,1. Con valor de 1 cundo se cumple la condición y cero en otros casos
-    Pro3c=sum(B2)/1000                #  calculo de la  probabilidad 
-    hist(A2)                          # histograma del valor de las áreas</code></pre>
+<pre class="r"><code>    X2=rnorm(1000,mean=2.0,sd=0.1)    #  Generación de números aleatorios  de X
+    Y2=rnorm(1000,mean=3.0,sd=0.2)    #  Generación de números aleatorios  de Y
+    Z2=data.frame(X2,Y2)              #  Generación de matriz de X,Y
+    A2=apply(Z2,1,prod)               #  Área de la placa A=XY
+    mediaA=mean(A2)                   #  Media del vector de áreas 
+    varianzaA=var(A2)                 #  Varianza del vector de áreas 
+    B2=as.numeric(A2&gt;5.9 &amp; A2&lt;6.1)    #  Generación de variable de 0,1. Con valor de 1 cundo se cumple la condición y cero en otros casos
+    Pro3c=sum(B2)/1000                #  Calculo de la  probabilidad 
+    hist(A2)                          # Histograma del valor de las áreas</code></pre>
 <p><img src="recurso607_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
-<pre class="r"><code>    qqnorm(A2)                        # gráfico de normalidad del área</code></pre>
+<pre class="r"><code>    qqnorm(A2)                        # Gráfico de normalidad del área</code></pre>
 <p><img src="recurso607_files/figure-html/unnamed-chunk-17-2.png" width="672" /></p>
 <pre class="r"><code>summarytools::descr(A2)</code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 1000  
+<pre><code>Descriptive Statistics   
+A2     
+**N:** 1000   
 
-                      value
+                         A2
 ----------------- ---------
-             Mean      5.98
-          Std.Dev      0.51
-              Min      4.36
-               Q1      5.64
-           Median      5.97
-               Q3      6.32
-              Max      7.77
-              MAD      0.50
-              IQR      0.68
+             Mean      6.01
+          Std.Dev      0.50
+              Min      4.28
+               Q1      5.67
+           Median      6.01
+               Q3      6.33
+              Max      7.87
+              MAD      0.49
+              IQR      0.66
                CV      0.08
-         Skewness      0.12
+         Skewness      0.06
       SE.Skewness      0.08
-         Kurtosis     -0.02
+         Kurtosis      0.16
           N.Valid   1000.00
         Pct.Valid    100.00</code></pre>
 </div>

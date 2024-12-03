@@ -30,7 +30,7 @@ knitr::include_graphics("img/estimador.png")
 
 En el centro se ubica el parámetro desconocido (punto blanco) y que tratamos de estimar utilizando para ello el estimador apropiado (figurativamente el arma que utilizamos).  En la figura ($a$) tenemos el resultado de un arma (estimador 1) que aunque tiene una alta precisión  ( poca varianza), presenta un desvío del centro  (sesgo). En la figura ($b$) se presenta el resultado de otra arma (estimador 2) que al igual que la primera que presenta un desvío del centro (sesgo), presenta una mayor varianza. La figura ($c$) representa el arma ideal (no tiene sesgo y poca varianza) y por último la figura ($d$)  que en promedio diríamos que está centrada (no sesgo), presenta una variación alta.
 
-Estas caractarísticas ahora en los estimadores se presentan a continuación:
+Estas características ahora en los estimadores se presentan a continuación:
 
 <br/><br/>
 
@@ -164,4 +164,4 @@ knitr::include_graphics("img/estimadores123.png")
 
 <br/>
 
-Como se muestra en la figura 2.37 las mejores propiedades las tiene el estimador $\widehat{\theta_{3}}$, posee una valor medio muy proximo a 4 y la menor varianza entre los tres estimadores
+Como se muestra en la figura 2.37 las mejores propiedades las tiene el estimador $\widehat{\theta_{3}}$, posee una valor medio muy próximo a 4 y la menor varianza entre los tres estimadores
